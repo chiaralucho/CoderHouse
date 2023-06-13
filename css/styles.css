@@ -1,8 +1,4 @@
-*{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
+*{box-sizing: border-box;}
 
 body, html{
     height: 100%;
@@ -11,12 +7,10 @@ body, html{
     letter-spacing: 1px;
 }
 
-header{
-    height: 70%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
+header h1{
+    font-family: 'Oooh Baby', cursive;
+    font-size: 4rem;
+    color: #d1d1d1e0;
 }
 
 /*header-backgrounds*/
@@ -24,6 +18,7 @@ header{
     background: linear-gradient(rgb(0,0,0,0.7),rgb(0,0,0,0.7)), url(../images/background_inicio.jpg);
     background-size: cover;
     background-position: center;
+    height: 50%;
 }
 
 .h_tienda{
@@ -50,75 +45,41 @@ header{
     background-position-y: 59%;
 }
 
-nav{
-    margin-top: 30px;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    width: 100%;
+.nav-link{
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 1.5rem;
 }
-
-.nav_list{
-    display: flex;
-    justify-content: space-around;
-    width: 33%;
-}
-
-.nav_list li{
-    font-size: 2rem;
-    list-style: none;
-}
-
-.nav_list a:hover{color: #a69171;}
 
 .logo{
     aspect-ratio: 1/1;
     object-fit: contain;
-    width: 15%;
-}
-
-a{
-    text-decoration: none;
-    color: #ffffff;
-}
-
-header h1{
-    font-family: 'Oooh Baby', cursive;
-    font-size: 64px;
-    color: #d1d1d1e0;
-    margin-bottom: 30px;
-}
-
-.main_index{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 80px 0px;
+    width: 20%;
+    margin: 0;
+    padding: 0;
 }
 
 .main_index h2{
     font-size: 2rem;
-    text-align: center;
-    margin-bottom: 30px;
-    width: 60%;
+    font-weight: 600;
 }
 
 .main_index p{
     font-size: 1.5rem;
-    width: 60%;
 }
 
-.main_index a{
-    font-size: 2rem;
+.btn-tienda{
+    font-size: 1.5rem;
     font-weight: 500;
+    color: #ffffff;
+    text-decoration: none;
     background-color: #718FA6;
-    margin: 70px 0px 0px 0px;
-    padding: 0.5rem 4rem;
     border: solid 1px #000000;
     border-radius: 10px;
+    padding: 0.3rem 1rem;
 }
 
-.main_index a:hover{
+.btn-tienda:hover{
     background-color: #8aaec9;
     color: #ffffff;
 }
@@ -186,36 +147,12 @@ header h1{
     width: 40%;
 }
 
-.main_galeria{margin: 15px;}
-
-.galeria{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    padding: 150px 0px;
-}
-
-.galeria img{
-    width: 30%;
-    margin-top: 2%;
-}
-.creditos{
-    justify-content: center;
-    display: flex;
-    align-items: center;
-    width: 100%;
-}
-
 .fotografo{
-    border-radius: 100%;
-    margin:0;
-    width: 2%;
+    color: #000000;
+    text-decoration: none;
 }
 
-.redes a{
-    color: #000000;
-}
+.fotografo:hover{text-decoration: underline;}
 
 .main_nostros{
     display: flex;
@@ -333,45 +270,61 @@ header h1{
     margin-top: 30px;
 }
 
-footer{
-    background-color: #a69171;
-    display: flex;
-    justify-content: space-evenly;
-    padding: 15px 50px;
+footer{background-color: #a69171;}
+
+.foot a{
+    font-size: 1.3rem;
+    text-decoration: none;
+    color: #000000;
 }
 
-.foot{
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: flex-start; 
-}
-
-.foot div{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 15px;
-}
-
-.foot h3{
-    font-size: 20px;
+footer h3{
+    font-size: 1.6rem;
     font-weight: 400;
-    color: #ffffff;
-    text-align: center;
-    width: 100%;
+    color: #000000;
 }
 
 .foot img{
     margin-right: 10px;
-    width: 22px;
+    width: 24px;
 }
 
 .foot a:hover{text-decoration: underline;}
 
 .line{border-left: solid 1px #000000;}
 
+@media screen and (max-width: 880px){
 
+    .nav-link{font-size: 1rem;}
+
+    header h1{font-size: 3rem;}
+
+    logo{width: 30%;}
+
+    .main_index h2{
+        letter-spacing: 0px;
+        font-size: 1.5rem;
+        font-weight: 600;
+    }
+
+    .main_index p{
+        font-size: 1rem;
+        letter-spacing: 1.5px;
+    }
+
+    .btn-tienda{font-size: 1.2rem;}
+
+    .fotografo{text-decoration: underline;}
+
+    .foot a{font-size: 0.9rem;}
+    
+    footer h3{font-size: 1.2rem;}
+    
+    .foot img{
+        margin-right: 10px;
+        width: 18px;
+    }
+}
 
 
 

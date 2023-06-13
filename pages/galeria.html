@@ -1,75 +1,101 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="images/favicon.png" type="image/png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300&family=Oooh+Baby&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../css/styles.css">
-    <title>Malliy - Panificados Sin Tacc</title>
-</head>
-<body>
-    <header class="h_galeria">        
-        <nav>
-            <ul class="nav_list">
-                <li><a href="../index.html">Inicio</a></li>
-                <li><a href="tienda.html">Tienda</a></li>
-            </ul>
-            <img class="logo" src="../images/malliy_blanco.png" alt="logo_malliy">
-            <ul class="nav_list">
-                <li><a href="galeria.html">Galería</a></li>
-                <li><a href="nostros.html">Nosotros</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
-            </ul>
-        </nav>
-        <h1>Galería</h1>
-    </header>
-    <main class="main_galeria">
-        <section class="creditos">
-            <p>Fotografías tomadas por Martin Bredice</p>
-            <img class="fotografo" src="../images/fotografo.jpg" alt="Fotógrafo">
-            <div class="redes">
-                <a href="https://www.instagram.com/martinbredice.ph/">@martinbredice.ph</a>
-                <a href="www.martinbredice.com">www.martinbredice.com</a>
-            </div>
-        </section>
-        <section class="galeria">
-            <img src="../images/campo_jamon.jpg" alt="Pan de campo con jamón">
-            <img src="../images/ciabatta_carne.jpg" alt="Pan ciabatta con carne">
-            <img src="../images/ciabatta_cortada.jpg" alt="Pan ciabatta por dentro">
-            <img src="../images/hamburguesa_completa.jpg" alt="Hmaburguesa completa">
-            <img src="../images/molde_mermelada.jpg" alt="Pan de molde con mermelada">
-            <img src="../images/pizza.jpg" alt="Pizza cortada">
-            <img src="../images/prepizzas.jpg" alt="prepizzas">
-            <img src="../images/rapiditas_rellenas.jpg" alt="rapiditas_rellenas">
-        </section>
-    </main>
-    <footer>
-        <section class="foot">
-            <h3>Seguinos:</h3>
-            <div>
-                <img src="../images/instagram.png" alt="icono_instagram">
-                <a href="https://www.instagram.com/malliy_panificadossintacc/" target="_blank">@malliy_panificadossintacc</a>  
-            </div>
-            <div>
-                <img src="../images/facebook.png" alt="icono_facebook">
-                <a href="https://www.facebook.com/malliypanificadossintacc?locale=es_LA" target="_blank">Malliy Panificados sin Tacc</a>
-            </div>
-        </section>
-        <div class="line"></div>
-            <section class="foot">
-                <div>
-                    <img src="../images/telefono.png" alt="icono_telefono">
-                    <a href="tel:+5491130888201" target="_blank">11-3088-8201</a>
+    <meta charset="UTF-8"><!DOCTYPE html>
+    <html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="../images/favicon.png" type="image/png">
+        <!--Fuentes-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300&family=Oooh+Baby&display=swap" rel="stylesheet">
+        <!--Bootstrap-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+        <link rel="stylesheet" href="../css/styles.css">
+        <title>Malliy - Panificados Sin Tacc</title>
+    </head>
+    <body>
+        <header class="container-fluid p-0">
+            <nav class="navbar navbar-expand-sm d-flex flex-column align-items-sm-center navbar-dark align-items-start h_inicio px-5 p-sm-0">
+                <div class="row">
+                    <div class="d-flex flex-column p-0">
+                        <div class="d-flex d-sm-block f-row justify-content-between">
+                            <div class="p-0 col-2 d-flex align-items-center">
+                                <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                                    <span class="navbar-toggler-icon"></span>
+                                </button>
+                            </div>
+                            <img class="col-10 navbar-brand d-sm-none logo" src="../images/malliy_blanco.png" alt="logo_malliy">
+                        </div>
+                    </div>
                 </div>
-                <div>
-                    <img src="../images/ubicacion.png" alt="icono_ubicacion">
-                    <a href="https://www.google.com/maps/place/X5194+Villa+Gral.+Belgrano,+C%C3%B3rdoba/@-31.9818958,-64.7154025,11.75z/data=!4m6!3m5!1s0x95d2b05df32fdf21:0xca30b7769d4566d3!8m2!3d-31.9776652!4d-64.5594102!16s%2Fm%2F027v388?hl=es" target="_blank">Villa Gral. Belgrano, Córdoba</a>
+                <div class="row">
+                    <div class="collapse navbar-collapse justify-content-center p-0" id="navbarSupportedContent">
+                        <ul class="navbar-nav col-4 justify-content-around">
+                            <li class="nav-item"><a class="nav-link p-0" href="../index.html">Inicio</a></li>
+                            <li class="nav-item"><a class="nav-link p-0" href="tienda.html">Tienda</a></li>
+                        </ul>
+                        <img class="navbar-brand d-none d-sm-block logo" src="../images/malliy_blanco.png" alt="logo_malliy">
+                        <ul class="navbar-nav col-4 justify-content-around">
+                            <li class="nav-item"><a class="nav-link active p-0" href="galeria.html">Galería</a></li>
+                            <li class="nav-item"><a class="nav-link p-0" href="nostros.html">Nosotros</a></li>
+                            <li class="nav-item"><a class="nav-link p-0" href="contacto.html">Contacto</a></li>
+                        </ul>
+                    </div>
                 </div>
-            </section>
-    </footer>
-</body>
-</html>
+                <h1 class="col-12 text-center m-0">Galería</h1>
+            </nav>
+        </header>
+        <main class="container-fluid py-5">
+            <div class="row justify-content-center">
+                <p class="col-12 text-center">Fotografías tomadas por: 
+                    <a class="fotografo" href="https://www.instagram.com/martinbredice.ph/">@martinbredice.ph</a>
+                </p>
+                <section class="galeria d-flex justify-content-center flex-wrap">
+                    <img class="col-lg-3 col-sm-5 col-10 m-2" src="../images/campo_jamon.jpg" alt="Pan de campo con jamón">
+                    <img class="col-lg-3 col-sm-5 col-10 m-2" src="../images/ciabatta_carne.jpg" alt="Pan ciabatta con carne">
+                    <img class="col-lg-3 col-sm-5 col-10 m-2" src="../images/ciabatta_cortada.jpg" alt="Pan ciabatta por dentro">
+                    <img class="col-lg-3 col-sm-5 col-10 m-2" src="../images/hamburguesa_completa.jpg" alt="Hmaburguesa completa">
+                    <img class="col-lg-3 col-sm-5 col-10 m-2" src="../images/molde_mermelada.jpg" alt="Pan de molde con mermelada">
+                    <img class="col-lg-3 col-sm-5 col-10 m-2" src="../images/pizza.jpg" alt="Pizza cortada">
+                    <img class="col-lg-3 col-sm-5 col-10 m-2" src="../images/prepizzas.jpg" alt="prepizzas">
+                    <img class="col-lg-3 col-sm-5 col-10 m-2" src="../images/rapiditas_rellenas.jpg" alt="rapiditas_rellenas">
+                </section>
+            </div>
+        </main>
+        <footer class="container-fluid p-4">
+            <div class="row p-0 mb-3">
+                <h3 class="col-12 text-center mb-3 p-0">Seguinos:</h3>
+                <div class="col-12 d-flex justify-content-center p-0">
+                    <div class="col-auto d-sm-flex flex-sm-row">
+                        <section class="foot flex-column me-sm-4 ">
+                            <div class="d-flex align-items-start mb-1">
+                                <img src="../images/instagram.png" alt="icono_instagram">
+                                <a href="https://www.instagram.com/malliy_panificadossintacc/" target="_blank">@malliy_panificadossintacc</a>  
+                            </div>
+                            <div class="d-flex align-items-start mb-1 mt-sm-2">
+                                <img src="../images/facebook.png" alt="icono_facebook">
+                                <a href="https://www.facebook.com/malliypanificadossintacc?locale=es_LA" target="_blank">Malliy Panificados sin Tacc</a>
+                            </div>
+                        </section>
+                        <div class="line d-none d-sm-block"></div>
+                        <section class="foot ms-sm-4 ">
+                            <div class="d-flex align-items-start mb-1">
+                                <img src="../images/telefono.png" alt="icono_telefono">
+                                <a href="tel:+5491130888201" target="_blank">11-3088-8201</a>
+                            </div>
+                            <div class="d-flex align-items-start mb-1 mt-sm-2">
+                                <img src="../images/ubicacion.png" alt="icono_ubicacion">
+                                <a href="https://www.google.com/maps/place/X5194+Villa+Gral.+Belgrano,+C%C3%B3rdoba/@-31.9818958,-64.7154025,11.75z/data=!4m6!3m5!1s0x95d2b05df32fdf21:0xca30b7769d4566d3!8m2!3d-31.9776652!4d-64.5594102!16s%2Fm%2F027v388?hl=es" target="_blank">Villa Gral. Belgrano, Córdoba</a>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    </body>
+    </html>
