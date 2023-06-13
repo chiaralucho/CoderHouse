@@ -1,0 +1,378 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body, html{
+    height: 100%;
+    width: 100%;
+    font-family: 'Nunito', sans-serif;
+    letter-spacing: 1px;
+}
+
+header{
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/*header-backgrounds*/
+.h_inicio{
+    background: linear-gradient(rgb(0,0,0,0.7),rgb(0,0,0,0.7)), url(../images/background_inicio.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.h_tienda{
+    background: linear-gradient(rgb(0,0,0,0.7),rgb(0,0,0,0.7)), url(../images/Background_tienda.jpg);
+    background-size: cover;
+    background-position-y: 50%;
+}
+
+.h_galeria{
+    background: linear-gradient(rgb(0,0,0,0.7),rgb(0,0,0,0.7)), url(../images/background_galeria.jpg);
+    background-size: cover;
+    background-position-y: 58%;
+}
+
+.h_nosotros{
+    background: linear-gradient(rgb(0,0,0,0.7),rgb(0,0,0,0.7)), url(../images/background_nostros.jpg);
+    background-size: cover;
+    background-position-y: 67%;
+}
+
+.h_contacto{
+    background: linear-gradient(rgb(0,0,0,0.7),rgb(0,0,0,0.7)), url(../images/background_contacto.jpg);
+    background-size: cover;
+    background-position-y: 59%;
+}
+
+nav{
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+}
+
+.nav_list{
+    display: flex;
+    justify-content: space-around;
+    width: 33%;
+}
+
+.nav_list li{
+    font-size: 2rem;
+    list-style: none;
+}
+
+.nav_list a:hover{color: #a69171;}
+
+.logo{
+    aspect-ratio: 1/1;
+    object-fit: contain;
+    width: 15%;
+}
+
+a{
+    text-decoration: none;
+    color: #ffffff;
+}
+
+header h1{
+    font-family: 'Oooh Baby', cursive;
+    font-size: 64px;
+    color: #d1d1d1e0;
+    margin-bottom: 30px;
+}
+
+.main_index{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 80px 0px;
+}
+
+.main_index h2{
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 30px;
+    width: 60%;
+}
+
+.main_index p{
+    font-size: 1.5rem;
+    width: 60%;
+}
+
+.main_index a{
+    font-size: 2rem;
+    font-weight: 500;
+    background-color: #718FA6;
+    margin: 70px 0px 0px 0px;
+    padding: 0.5rem 4rem;
+    border: solid 1px #000000;
+    border-radius: 10px;
+}
+
+.main_index a:hover{
+    background-color: #8aaec9;
+    color: #ffffff;
+}
+
+.main_tienda{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 150px 20px;
+}
+
+/*Caja producto completo*/
+.t_product{
+    display: flex;
+    align-items: center;
+    margin-bottom: 50px;
+    border: solid 1px #000000;
+    border-radius: 10px;
+    width: 45%;
+}
+
+/*contenido de producto*/
+.content_product{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100%;
+    padding: 20px;
+}
+
+.content_product p, .content_product h2{
+    width: 100%;
+    text-align: center;
+}
+
+.price_product{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+
+.price_product div{
+    display: flex;
+    align-items: center;
+}
+
+.price_product button{
+    background-color:#9db6ff;
+    font-family: 'Nunito', sans-serif;
+    color: #ffffff;
+    border-radius: 5px;
+    border: solid 1px #000000;
+    margin-left: 5px;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.price_product button:hover{background-color: #88a5fc;}
+
+.product_photo{
+    object-fit: cover;
+    border-radius: 10px 0px 0px 10px;
+    width: 40%;
+}
+
+.main_galeria{margin: 15px;}
+
+.galeria{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 150px 0px;
+}
+
+.galeria img{
+    width: 30%;
+    margin-top: 2%;
+}
+.creditos{
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.fotografo{
+    border-radius: 100%;
+    margin:0;
+    width: 2%;
+}
+
+.redes a{
+    color: #000000;
+}
+
+.main_nostros{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 150px 20px;
+}
+
+.presentacion{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 50%;
+}
+
+.presentacion p{
+    margin-top: 30px;
+    width: 90%;
+}
+
+.carrusel{
+    display: flex;
+    padding: 0px;
+    border: groove 3px #000000;
+    border-radius: 10px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    overflow: hidden;
+    width: 40%;
+}
+
+.carrusel img{
+    aspect-ratio: 4/3;
+    object-fit: cover;
+    scroll-snap-align: center;
+    width: 100%;
+}
+
+.main_contacto{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 100px 50px;
+}
+
+.main_contacto aside{width: 40%;}
+
+.formulario{
+    box-shadow: -2px -2px 15px 0.5px #000000;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    border: solid 1px #000000;
+    border-radius: 15px;
+    padding: 25px;
+}
+
+.formulario label{
+    font-size: 1.3rem;
+    margin: 7px 0px 3px 0px;
+}
+
+.formulario input{
+    font-family: 'Nunito', sans-serif;
+    font-size: 1rem;
+    height: 2rem;
+    padding: 5px;
+    border: solid 1px #000000;
+    border-radius: 5px;
+    border: solid 1px #000000;
+}
+
+.formulario textarea{
+    font-family: 'Nunito', sans-serif;
+    font-size: 1.1rem;
+    padding: 5px;
+    border-radius: 5px;
+    border: solid 1px #000000;
+}
+
+.formulario input:focus, .formulario textarea:focus{
+    border: solid 1px #88a5fc;
+    outline: none;
+}
+
+.formulario input::placeholder, .formulario textarea::placeholder{
+    font-size: 1rem;
+    padding: 5px;
+}
+
+.formulario input:last-child{
+    background-color: #9db6ff;
+    font-weight: 300;
+    color: #ffffff;
+    margin-top: 15px;
+}
+
+.formulario input:last-child:hover{
+    background-color: #88a5fc;
+    cursor: pointer;
+}
+
+.main_contacto section{
+    font-size: 1.3rem;
+    font-weight: 600;
+    text-align: center;
+    width: 50%;
+}
+
+.redes{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+}
+
+footer{
+    background-color: #a69171;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 15px 50px;
+}
+
+.foot{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start; 
+}
+
+.foot div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.foot h3{
+    font-size: 20px;
+    font-weight: 400;
+    color: #ffffff;
+    text-align: center;
+    width: 100%;
+}
+
+.foot img{
+    margin-right: 10px;
+    width: 22px;
+}
+
+.foot a:hover{text-decoration: underline;}
+
+.line{border-left: solid 1px #000000;}
+
+
+
+
+
+
