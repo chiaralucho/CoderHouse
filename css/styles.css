@@ -47,13 +47,13 @@ header h1{
 .nav-link{
     text-decoration: none;
     color: #ffffff;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
 }
 
 .logo{
     aspect-ratio: 1/1;
     object-fit: contain;
-    width: 20%;
+
     margin: 0;
     padding: 0;
 }
@@ -93,38 +93,8 @@ header h1{
 
 /*Caja producto completo*/
 .t_product{
-    display: flex;
-    align-items: center;
-    margin-bottom: 50px;
     border: solid 1px #000000;
     border-radius: 10px;
-    width: 45%;
-}
-
-/*contenido de producto*/
-.content_product{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    height: 100%;
-    padding: 20px;
-}
-
-.content_product p, .content_product h2{
-    width: 100%;
-    text-align: center;
-}
-
-.price_product{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    width: 100%;
-}
-
-.price_product div{
-    display: flex;
-    align-items: center;
 }
 
 .price_product button{
@@ -133,17 +103,13 @@ header h1{
     color: #ffffff;
     border-radius: 5px;
     border: solid 1px #000000;
-    margin-left: 5px;
-    padding: 5px;
     cursor: pointer;
 }
 
 .price_product button:hover{background-color: #88a5fc;}
 
 .product_photo{
-    object-fit: cover;
     border-radius: 10px 0px 0px 10px;
-    width: 40%;
 }
 
 .fotografo{
@@ -292,20 +258,11 @@ footer h3{
 
 .line{border-left: solid 1px #000000;}
 
-@media screen and (min-width: 576px){
-
-    .navbar{height: 100%;}
-    
-    header{height: 70%;}
-}
-
-@media screen and (max-width: 880px){
+@media screen and (max-width: 725px){
 
     .nav-link{font-size: 1rem;}
 
     header h1{font-size: 3rem;}
-
-    logo{width: 30%;}
 
     .main_index h2{
         letter-spacing: 0px;
@@ -330,6 +287,18 @@ footer h3{
         margin-right: 10px;
         width: 18px;
     }
+}
+
+@media screen and (min-width: 575px){
+
+    .navbar{height: 100%;}
+    
+    header{height: 70%;}
+}
+
+@media screen and (max-width: 575px){
+
+    .nav-link{font-size: 1.4rem;}
 }
 
 

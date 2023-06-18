@@ -17,26 +17,22 @@
 <body>
     <header class="container-fluid p-0">
         <nav class="navbar navbar-expand-sm d-flex flex-column align-items-sm-center navbar-dark justify-content-around align-items-start h_tienda px-5 p-sm-0">
-            <div class="row d-sm-none">
-                <div class="d-flex flex-column p-0">
-                    <div class="d-flex d-sm-block f-row justify-content-between">
-                        <div class="p-0 col-2 d-flex align-items-center">
-                            <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                                <span class="navbar-toggler-icon"></span>
-                            </button>
-                        </div>
-                        <img class="col-10 navbar-brand d-sm-none logo" src="../images/malliy_blanco.png" alt="logo_malliy">
-                    </div>
+            <div class="row d-sm-none justify-content-between">
+                <div class="col-auto d-flex align-items-center p-0">
+                    <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
                 </div>
+                <img class="col-3 navbar-brand d-sm-none logo" src="../images/malliy_blanco.png" alt="logo_malliy">
             </div>
             <div class="row">
                 <div class="collapse navbar-collapse justify-content-center p-0" id="navbarSupportedContent">
-                    <ul class="navbar-nav col-4 justify-content-around">
+                    <ul class="navbar-nav col-sm-5 justify-content-evenly">
                         <li class="nav-item"><a class="nav-link p-0" href="../index.html">Inicio</a></li>
                         <li class="nav-item"><a class="nav-link active p-0" href="tienda.html">Tienda</a></li>
                     </ul>
-                    <img class="navbar-brand d-none d-sm-block logo" src="../images/malliy_blanco.png" alt="logo_malliy">
-                    <ul class="navbar-nav col-4 justify-content-around">
+                    <img class="navbar-brand col-sm-2 d-none d-sm-block logo" src="../images/malliy_blanco.png" alt="logo_malliy">
+                    <ul class="navbar-nav col-sm-5 justify-content-evenly  ">
                         <li class="nav-item"><a class="nav-link p-0" href="galeria.html">Galería</a></li>
                         <li class="nav-item"><a class="nav-link p-0" href="nostros.html">Nosotros</a></li>
                         <li class="nav-item"><a class="nav-link p-0" href="contacto.html">Contacto</a></li>
@@ -46,21 +42,23 @@
             <h1 class="col-12 text-center mt-5 m-sm-0">Tienda</h1>
         </nav>
     </header>
-    <main class="main_tienda"> <!--Bloques de productos con GRIDS-->
-        <section class="t_product">
-            <img class="product_photo" src="../images/pan_campo.jpg" alt="Pan de campo">
-            <div class="content_product">
-                <h2>Pan de campo</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque eius quibusdam quasi maiores modi repudiandae rerum dicta facilis dolorum molestias!</p>
-                <div class="price_product">
-                    <h3>$1111,11</h3>
-                    <div>
-                        <img src="../images/carrito_compras.png" alt="">
-                        <button>Agregar al carrito</button>
+    <main class="main_tienda container-fluid"> <!--Bloques de productos con GRIDS-->
+        <div class="row justify-content-center">
+            <div class="d-flex col-10 t_product p-0">
+                <img class="col-3 product_photo" src="../images/pan_ciabatta.jpg" alt="Pan ciabatta">
+                <div class="col-9 d-flex flex-column align-items-center justify-content-evenly p-0">
+                    <h2>Pan de molde</h2>
+                    <p class="col-9">Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque eius quibusdam quasi maiores modi repudiandae rerum dicta facilis dolorum molestias!</p>
+                    <div class="d-flex justify-content-center align-items-between price_product">
+                        <h3>$1111,11</h3>
+                        <div class="">
+                            <img src="../images/carrito_compras.png" alt="">
+                            <button class="">Agregar al carrito</button>
+                        </div>
                     </div>
-                </div>
-            </div> 
-        </section>
+                </div>               
+            </div>
+        </div>
         <section class="t_product">
             <img class="product_photo" src="../images/pan_molde.jpg" alt="Pan de molde">
             <div class="content_product">
