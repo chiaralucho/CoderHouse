@@ -13,6 +13,10 @@ header h1{
     color: #d1d1d1e0;
 }
 
+.navbar-toggler{border-color: #ffffff;}
+
+.navbar-toggler:focus{box-shadow: none;}
+
 /*header-backgrounds*/
 .h_inicio{
     background: linear-gradient(rgb(0,0,0,0.7),rgb(0,0,0,0.7)), url(../images/background_inicio.jpg);
@@ -53,9 +57,6 @@ header h1{
 .logo{
     aspect-ratio: 1/1;
     object-fit: contain;
-
-    margin: 0;
-    padding: 0;
 }
 
 .main_index h2{
@@ -106,20 +107,22 @@ header h1{
 .t_product p{font-size: 1.3rem;}
 
 .price_product h3{
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-weight: 600;
 }
 
 .btn-compra{
-    background-color:#9db6ff;
+    height: 2.5rem;
+    background-color: #718FA6;
     font-family: 'Nunito', sans-serif;
+    font-size: 1.5rem;
     color: #ffffff;
     border-radius: 5px;
     border: solid 1px #000000;
     cursor: pointer;
 }
 
-.btn-compra:hover{background-color: #88a5fc;}
+.btn-compra:hover{background-color: #8aaec9;}
 
 .product_photo{
     border-radius: 10px 0px 0px 10px;
@@ -279,6 +282,9 @@ footer h3{
     .t_product p{font-size: 1rem;}
 
     .price_product h3{font-size: 1.2rem;}
+
+    .btn-compra{font-size: 1rem;}
+
 }
 
 @media screen and (max-width: 1260px){
@@ -293,7 +299,7 @@ footer h3{
 
 @media screen and (max-width: 725px){
 
-    .nav-link{font-size: 1rem;}
+    .nav-link{font-size: 1.4rem;}
 
     header h1{font-size: 3rem;}
 
@@ -311,6 +317,8 @@ footer h3{
     .btn-tienda{font-size: 1.2rem;}
 
     .t_product:first-child{margin-top: 0px;}
+
+    .btn-compra{font-size: 1rem;}
 
     .fotografo{text-decoration: underline;}
 
@@ -333,7 +341,7 @@ footer h3{
 
 @media screen and (max-width: 575px){
 
-    .nav-link{font-size: 1.4rem;}
+    .nav-link{margin-bottom: 0.5rem;}
 
     .t_product h2{font-size: 0.7rem;}
 
@@ -341,9 +349,19 @@ footer h3{
 
     .price_product h3{font-size: 0.7rem;}
 
-    .btn-compra{font-size: 0.6rem;}
+    .btn-compra{
+        font-size: 0.8rem;
+        height: 1.9rem;
+    }
 }
 
+@media screen and (max-width: 374px){
+
+    .container-toggler{width: 25%;}
+
+    .logo{width: 35%;}
+
+}
 
 
 
