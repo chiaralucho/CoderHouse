@@ -88,16 +88,29 @@ header h1{
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
-    padding: 150px 20px;
 }
 
 /*Caja producto completo*/
 .t_product{
     border: solid 1px #000000;
     border-radius: 10px;
+    margin-top: 4rem;
+    height: auto;
 }
 
-.price_product button{
+.t_product h2{
+    font-size: 2rem;
+    font-weight: bolder;
+}
+
+.t_product p{font-size: 1.3rem;}
+
+.price_product h3{
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.btn-compra{
     background-color:#9db6ff;
     font-family: 'Nunito', sans-serif;
     color: #ffffff;
@@ -106,10 +119,11 @@ header h1{
     cursor: pointer;
 }
 
-.price_product button:hover{background-color: #88a5fc;}
+.btn-compra:hover{background-color: #88a5fc;}
 
 .product_photo{
     border-radius: 10px 0px 0px 10px;
+    object-fit: cover;
 }
 
 .fotografo{
@@ -258,6 +272,25 @@ footer h3{
 
 .line{border-left: solid 1px #000000;}
 
+@media screen and (max-width: 1440px){
+
+    .t_product h2{font-size: 1.4rem;}
+
+    .t_product p{font-size: 1rem;}
+
+    .price_product h3{font-size: 1.2rem;}
+}
+
+@media screen and (max-width: 1260px){
+
+    .t_product h2{font-size: 1rem;}
+
+    .t_product p{font-size: 0.8rem;}
+
+    .price_product h3{font-size: 1rem;}
+
+}
+
 @media screen and (max-width: 725px){
 
     .nav-link{font-size: 1rem;}
@@ -276,6 +309,8 @@ footer h3{
     }
 
     .btn-tienda{font-size: 1.2rem;}
+
+    .t_product:first-child{margin-top: 0px;}
 
     .fotografo{text-decoration: underline;}
 
@@ -299,6 +334,14 @@ footer h3{
 @media screen and (max-width: 575px){
 
     .nav-link{font-size: 1.4rem;}
+
+    .t_product h2{font-size: 0.7rem;}
+
+    .t_product p{font-size: 0.5rem;}
+
+    .price_product h3{font-size: 0.7rem;}
+
+    .btn-compra{font-size: 0.6rem;}
 }
 
 
