@@ -1,17 +1,19 @@
-*{box-sizing: border-box;}
 
-body, html{
-    height: 100%;
-    width: 100%;
+html,body{
+    min-height: 100%;
     font-family: 'Nunito', sans-serif;
     letter-spacing: 1px;
 }
+
+header{overflow-x: hidden;}
 
 header h1{
     font-family: 'Oooh Baby', cursive;
     font-size: 4rem;
     color: #d1d1d1e0;
 }
+
+header .row, header .navbar{height: 100%;}
 
 .navbar-toggler{border-color: #ffffff;}
 
@@ -27,7 +29,7 @@ header h1{
 .h_tienda{
     background: linear-gradient(rgb(0,0,0,0.7),rgb(0,0,0,0.7)), url(../images/Background_tienda.jpg);
     background-size: cover;
-    background-position-y: 50%;
+    background-position-y: center;
 }
 
 .h_galeria{
@@ -51,7 +53,7 @@ header h1{
 .nav-link{
     text-decoration: none;
     color: #ffffff;
-    font-size: 1.3rem;
+    font-size: 1.4rem;
 }
 
 .logo{
@@ -82,13 +84,6 @@ header h1{
 .btn-tienda:hover{
     background-color: #8aaec9;
     color: #ffffff;
-}
-
-.main_tienda{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
 }
 
 /*Caja producto completo*/
@@ -299,7 +294,7 @@ footer h3{
 
 @media screen and (max-width: 725px){
 
-    .nav-link{font-size: 1.4rem;}
+    .nav-link{font-size: 1rem;}
 
     header h1{font-size: 3rem;}
 
@@ -336,12 +331,15 @@ footer h3{
 
     .navbar{height: 100%;}
     
-    header{height: 70%;}
+    header{height: 70vh;}
 }
 
 @media screen and (max-width: 575px){
 
-    .nav-link{margin-bottom: 0.5rem;}
+    .nav-link{
+        margin-bottom: 0.5rem;
+        font-size: 1.4rem;
+    }
 
     .t_product h2{font-size: 0.7rem;}
 
@@ -362,6 +360,3 @@ footer h3{
     .logo{width: 35%;}
 
 }
-
-
-
