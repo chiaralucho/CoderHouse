@@ -153,14 +153,6 @@ header .row, header .navbar{height: 100%;}
     width: 100%;
 }
 
-.main_contacto{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 100px 50px;
-}
-
-.main_contacto aside{width: 40%;}
 
 .formulario{
     box-shadow: -2px -2px 15px 0.5px #000000;
@@ -173,7 +165,7 @@ header .row, header .navbar{height: 100%;}
 }
 
 .formulario label{
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     margin: 7px 0px 3px 0px;
 }
 
@@ -193,6 +185,7 @@ header .row, header .navbar{height: 100%;}
     padding: 5px;
     border-radius: 5px;
     border: solid 1px #000000;
+    height: 150px;
 }
 
 .formulario input:focus, .formulario textarea:focus{
@@ -221,7 +214,6 @@ header .row, header .navbar{height: 100%;}
     font-size: 1.3rem;
     font-weight: 600;
     text-align: center;
-    width: 50%;
 }
 
 .redes{
@@ -255,9 +247,24 @@ footer h3{
 
 @media screen and (min-width: 2000px){
 
+    header{height: 60vh;}
+
+    header h1{font-size: 5rem;}
+
+    .nav-link{font-size: 3rem;}
+
+    .collapse{width: 100%;}
+
     .main_nosotros h2{font-size: 3rem;}
 
     .main_nosotros p{font-size: 1.8rem;}
+
+    .main_contacto section{width: 30%;}
+
+    .main_contacto aside{width: 25%;}
+
+    .main_contacto p{font-size: 2.5rem;}
+
 
 }
 
@@ -266,6 +273,8 @@ footer h3{
     .main_nosotros h2{font-size: 2.5rem;}
 
     .main_nosotros p{font-size: 1.5rem;}
+
+    .main_contacto p{font-size: 2rem;}
 
 }
 
@@ -282,7 +291,6 @@ footer h3{
     .main_nosotros h2{font-size: 2.5rem;}
 
     .main_nosotros p{font-size: 1.5rem;}
-
 }
 
 @media screen and (max-width: 1260px){
@@ -296,6 +304,8 @@ footer h3{
     .main_nosotros h2{font-size: 2rem;}
 
     .main_nosotros p{font-size: 1.2rem;}
+
+    .main_contacto p{font-size: 1.5rem;}
 }
 
 @media screen and (max-width: 725px){
@@ -365,6 +375,10 @@ footer h3{
     .main_nosotros h2{font-size: 1.5rem;}
 
     .main_nosotros p{font-size: 0.8rem;}
+
+    .main_contacto p{font-size: 1rem;}
+
+    .formulario textarea{height: 200px;}
 }
 @media screen and (max-width: 374px){
 
