@@ -1,0 +1,334 @@
+$pagesBg:(
+    inicio: center,
+    tienda: center,
+    galeria: 58%,
+    nosotros: 67%,
+    contacto: 59%
+);
+html,body{
+    min-height: 100%;
+    font-family: 'Nunito', sans-serif;
+    letter-spacing: 1px;
+}
+
+header{
+    overflow: hidden;
+    h1{
+        font-family: 'Oooh Baby', cursive;
+        font-size: 4rem;
+        color: #d1d1d1e0;
+    }
+    .row, .nav{height: 100%;}
+}
+//menu hamburguesa
+.navbar-toggler{
+    border-color: #ffffff;
+    &focus{
+        box-shadow: none;
+    }
+}
+
+//header backgrounds
+@each $page, $positionValue in $pagesBg{
+    .h_#{$page}{
+        background: linear-gradient(rgb(0,0,0,0.7),rgb(0,0,0,0.7)), url(../images/background_#{$page}.jpg); 
+        background-size: cover;
+        background-position-y: $positionValue;
+   }
+}
+
+.nav-link{
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 1.4rem;
+}
+.logo{
+    aspect-ratio: 1/1;
+    object-fit: contain;
+}
+
+.main_index{
+    h2{
+        font-size: 2rem;
+        font-weight: 600;
+    }
+    p{font-size: 1.5rem;}
+}
+.btn{
+    color: #ffffff;
+    text-decoration: none;
+    background-color: #718FA6;
+    border: solid 1px #000000;
+    border-radius: 10px;
+    &:hover{background-color: #8aaec9;}
+}
+.btn-tienda{
+    @extend .btn;
+    font-size: 1.5rem;
+    font-weight: 500;
+    padding: 0.3rem 1rem;
+}
+
+.t_product{
+    border-radius: 10px;
+    box-shadow: -2px -2px 15px 0.5px #000000;
+    margin-top: 4rem;
+    height: auto;
+    h2{
+        font-size: 2rem;
+        font-weight: bolder; 
+    }
+    p{font-size: 1.3rem;}
+}
+.price_product h3{
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.btn-compra{
+    @extend .btn;
+    height: 2.5rem;
+    font-size: 1.5rem;
+}
+
+
+.product_photo{
+    border-radius: 10px 0px 0px 10px;
+    object-fit: cover;
+}
+  
+.galeria img{
+    box-shadow: -1px -1px 10px 0.5px #000000;
+    border-radius: 15px;
+}
+  
+.fotografo{
+    color: #000000;
+    text-decoration: none;
+    &:hover{text-decoration: underline;}
+}
+
+.carrusel{
+    display: flex;
+    padding: 0px;
+    box-shadow: -2px -2px 15px 0.5px #000000;
+    border-radius: 10px;
+    overflow-x: hidden;
+    scroll-snap-type: x mandatory;
+    overflow: hidden;
+    img{
+        aspect-ratio: 4/3;
+        object-fit: cover;
+        scroll-snap-align: center;
+        width: 100%;
+    }
+}
+.formulario{
+    box-shadow: -2px -2px 15px 0.5px #000000;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    border: solid 1px #000000;
+    border-radius: 15px;
+    padding: 25px;
+    label{
+        font-size: 1.2rem;
+        margin: 7px 0px 3px 0px;
+    }
+    input{
+        font-size: 1rem;
+        height: 2rem;
+        padding: 5px;
+        border: solid 1px #000000;
+        border-radius: 5px;
+        border: solid 1px #000000;
+    }
+    textarea{
+        font-size: 1.1rem;
+        padding: 5px;
+        border-radius: 5px;
+        border: solid 1px #000000;
+        height: 150px;
+    }
+    input:focus, textarea:focus{
+        border: solid 1px #88a5fc;
+        outline: none;
+    }
+    input::placeholder, textarea::placeholder{
+        font-size: 1rem;
+        padding: 5px;
+    }
+    input:last-child{
+        background-color: #9db6ff;
+        font-weight: 300;
+        color: #ffffff;
+        margin-top: 15px;
+        &:hover{background-color: #88a5fc;}
+    }
+}
+.main_contacto section{
+    font-size: 1.3rem;
+    font-weight: 600;
+    text-align: center;
+}
+footer{
+    background-color: #a69171;
+    h3{
+        font-size: 1.6rem;
+        font-weight: 400;
+        color: #000000;
+    }
+}
+
+.foot a{
+    font-size: 1.3rem;
+    text-decoration: none;
+    color: #000000;
+    &:hover{text-decoration: underline;}
+}
+.foot img{
+    margin-right: 10px;
+    width: 24px;
+}
+.line{border-left: solid 1px #000000;}
+@media screen and (min-width: 2000px){
+
+    header{height: 60vh;}
+
+    header h1{font-size: 5rem;}
+
+    .nav-link{font-size: 3rem;}
+
+    .collapse{width: 100%;}
+
+    .main_nosotros h2{font-size: 3rem;}
+
+    .main_nosotros p{font-size: 1.8rem;}
+
+    .main_contacto section{width: 30%;}
+
+    .main_contacto aside{width: 25%;}
+
+    .main_contacto p{font-size: 2.5rem;}
+
+
+}
+
+@media screen and (max-width: 2000px){
+
+    .main_nosotros h2{font-size: 2.5rem;}
+
+    .main_nosotros p{font-size: 1.5rem;}
+
+    .main_contacto p{font-size: 2rem;}
+
+}
+
+@media screen and (max-width: 1440px){
+
+    .t_product h2{font-size: 1.4rem;}
+
+    .t_product p{font-size: 1rem;}
+
+    .price_product h3{font-size: 1.2rem;}
+
+    .btn-compra{font-size: 1rem;}
+
+    .main_nosotros h2{font-size: 2.5rem;}
+
+    .main_nosotros p{font-size: 1.5rem;}
+}
+
+@media screen and (max-width: 1260px){
+
+    .t_product h2{font-size: 1rem;}
+
+    .t_product p{font-size: 0.8rem;}
+
+    .price_product h3{font-size: 1rem;}
+    
+    .main_nosotros h2{font-size: 2rem;}
+
+    .main_nosotros p{font-size: 1.2rem;}
+
+    .main_contacto p{font-size: 1.5rem;}
+}
+
+@media screen and (max-width: 725px){
+
+    .nav-link{font-size: 1rem;}
+
+    header h1{font-size: 3rem;}
+
+    .main_index h2{
+        letter-spacing: 0px;
+        font-size: 1.5rem;
+        font-weight: 600;
+    }
+
+    .main_index p{
+        font-size: 1rem;
+        letter-spacing: 1.5px;
+    }
+
+    .btn-tienda{font-size: 1.2rem;}
+
+    .t_product:first-child{margin-top: 0px;}
+
+    .btn-compra{font-size: 1rem;}
+
+    .fotografo{text-decoration: underline;}
+
+    .main_nosotros h2{font-size: 1.8rem;}
+
+    .main_nosotros p{font-size: 1rem;}
+
+    .foot a{font-size: 0.9rem;}
+    
+    footer h3{font-size: 1.2rem;}
+    
+    .foot img{
+        margin-right: 10px;
+        width: 18px;
+    }
+}
+
+@media screen and (min-width: 575px){
+
+    .navbar{height: 100%;}
+    
+    header{height: 70vh;}
+}
+
+@media screen and (max-width: 575px){
+
+    .nav-link{
+        margin-bottom: 0.5rem;
+        font-size: 1.4rem;
+    }
+
+    .t_product h2{font-size: 0.7rem;}
+
+    .t_product p{font-size: 0.5rem;}
+
+    .price_product h3{font-size: 0.7rem;}
+
+    .btn-compra{
+        font-size: 0.8rem;
+        height: 1.9rem;
+    }
+
+    .main_nosotros h2{font-size: 1.5rem;}
+
+    .main_nosotros p{font-size: 0.8rem;}
+
+    .main_contacto p{font-size: 1rem;}
+
+    .formulario textarea{height: 200px;}
+}
+@media screen and (max-width: 374px){
+
+    .container-toggler{width: 25%;}
+
+    .logo{width: 35%;}
+}

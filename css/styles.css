@@ -1,389 +1,402 @@
-
-html,body{
-    min-height: 100%;
-    font-family: 'Nunito', sans-serif;
-    letter-spacing: 1px;
+html, body {
+  min-height: 100%;
+  font-family: "Nunito", sans-serif;
+  letter-spacing: 1px;
 }
 
-header{overflow: hidden}
-
-header h1{
-    font-family: 'Oooh Baby', cursive;
-    font-size: 4rem;
-    color: #d1d1d1e0;
+header {
+  overflow: hidden;
+}
+header h1 {
+  font-family: "Oooh Baby", cursive;
+  font-size: 4rem;
+  color: rgba(209, 209, 209, 0.8784313725);
+}
+header .row, header .nav {
+  height: 100%;
 }
 
-header .row, header .navbar{height: 100%;}
-
-.navbar-toggler{border-color: #ffffff;}
-
-.navbar-toggler:focus{box-shadow: none;}
-
-/*header-backgrounds*/
-.h_inicio{
-    background: linear-gradient(rgb(0,0,0,0.7),rgb(0,0,0,0.7)), url(../images/background_inicio.jpg);
-    background-size: cover;
-    background-position: center;
+.navbar-toggler {
+  border-color: #ffffff;
+}
+.navbar-togglerfocus {
+  box-shadow: none;
 }
 
-.h_tienda{
-    background: linear-gradient(rgb(0,0,0,0.7),rgb(0,0,0,0.7)), url(../images/Background_tienda.jpg);
-    background-size: cover;
-    background-position-y: center;
+.h_inicio {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../images/background_inicio.jpg);
+  background-size: cover;
+  background-position-y: center;
 }
 
-.h_galeria{
-    background: linear-gradient(rgb(0,0,0,0.7),rgb(0,0,0,0.7)), url(../images/background_galeria.jpg);
-    background-size: cover;
-    background-position-y: 58%;
+.h_tienda {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../images/background_tienda.jpg);
+  background-size: cover;
+  background-position-y: center;
 }
 
-.h_nosotros{
-    background: linear-gradient(rgb(0,0,0,0.7),rgb(0,0,0,0.7)), url(../images/background_nostros.jpg);
-    background-size: cover;
-    background-position-y: 67%;
+.h_galeria {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../images/background_galeria.jpg);
+  background-size: cover;
+  background-position-y: 58%;
 }
 
-.h_contacto{
-    background: linear-gradient(rgb(0,0,0,0.7),rgb(0,0,0,0.7)), url(../images/background_contacto.jpg);
-    background-size: cover;
-    background-position-y: 59%;
+.h_nosotros {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../images/background_nosotros.jpg);
+  background-size: cover;
+  background-position-y: 67%;
 }
 
-.nav-link{
-    text-decoration: none;
-    color: #ffffff;
-    font-size: 1.4rem;
+.h_contacto {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../images/background_contacto.jpg);
+  background-size: cover;
+  background-position-y: 59%;
 }
 
-.logo{
-    aspect-ratio: 1/1;
-    object-fit: contain;
+.nav-link {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 1.4rem;
 }
 
-.main_index h2{
-    font-size: 2rem;
-    font-weight: 600;
+.logo {
+  aspect-ratio: 1/1;
+  object-fit: contain;
 }
 
-.main_index p{
-    font-size: 1.5rem;
+.main_index h2 {
+  font-size: 2rem;
+  font-weight: 600;
+}
+.main_index p {
+  font-size: 1.5rem;
 }
 
-.btn-tienda{
-    font-size: 1.5rem;
-    font-weight: 500;
-    color: #ffffff;
-    text-decoration: none;
-    background-color: #718FA6;
-    border: solid 1px #000000;
-    border-radius: 10px;
-    padding: 0.3rem 1rem;
+.btn, .btn-compra, .btn-tienda {
+  color: #ffffff;
+  text-decoration: none;
+  background-color: #718FA6;
+  border: solid 1px #000000;
+  border-radius: 10px;
+}
+.btn:hover, .btn-compra:hover, .btn-tienda:hover {
+  background-color: #8aaec9;
 }
 
-.btn-tienda:hover{
-    background-color: #8aaec9;
-    color: #ffffff;
+.btn-tienda {
+  font-size: 1.5rem;
+  font-weight: 500;
+  padding: 0.3rem 1rem;
 }
 
-/*Caja producto completo*/
-.t_product{
-    border-radius: 10px;
-    box-shadow: -2px -2px 15px 0.5px #000000;
-    margin-top: 4rem;
-    height: auto;
+.t_product {
+  border-radius: 10px;
+  box-shadow: -2px -2px 15px 0.5px #000000;
+  margin-top: 4rem;
+  height: auto;
+}
+.t_product h2 {
+  font-size: 2rem;
+  font-weight: bolder;
+}
+.t_product p {
+  font-size: 1.3rem;
 }
 
-.t_product h2{
-    font-size: 2rem;
-    font-weight: bolder;
+.price_product h3 {
+  font-size: 2rem;
+  font-weight: 600;
 }
 
-.t_product p{font-size: 1.3rem;}
-
-.price_product h3{
-    font-size: 2rem;
-    font-weight: 600;
+.btn-compra {
+  height: 2.5rem;
+  font-size: 1.5rem;
 }
 
-.btn-compra{
-    height: 2.5rem;
-    background-color: #718FA6;
-    font-family: 'Nunito', sans-serif;
-    font-size: 1.5rem;
-    color: #ffffff;
-    border-radius: 5px;
-    border: solid 1px #000000;
-    cursor: pointer;
+.product_photo {
+  border-radius: 10px 0px 0px 10px;
+  object-fit: cover;
 }
 
-.btn-compra:hover{background-color: #8aaec9;}
-
-.product_photo{
-    border-radius: 10px 0px 0px 10px;
-    object-fit: cover;
+.galeria img {
+  box-shadow: -1px -1px 10px 0.5px #000000;
+  border-radius: 15px;
 }
 
-.galeria img{
-    box-shadow: -1px -1px 10px 0.5px #000000;
-    border-radius: 15px;
+.fotografo {
+  color: #000000;
+  text-decoration: none;
+}
+.fotografo:hover {
+  text-decoration: underline;
 }
 
-.fotografo{
-    color: #000000;
-    text-decoration: none;
+.carrusel {
+  display: flex;
+  padding: 0px;
+  box-shadow: -2px -2px 15px 0.5px #000000;
+  border-radius: 10px;
+  overflow-x: hidden;
+  scroll-snap-type: x mandatory;
+  overflow: hidden;
+}
+.carrusel img {
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  scroll-snap-align: center;
+  width: 100%;
 }
 
-.fotografo:hover{text-decoration: underline;}
-
-.carrusel{
-    display: flex;
-    padding: 0px;
-    box-shadow: -2px -2px 15px 0.5px #000000;
-    border-radius: 10px;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    overflow: hidden;
+.formulario {
+  box-shadow: -2px -2px 15px 0.5px #000000;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  border: solid 1px #000000;
+  border-radius: 15px;
+  padding: 25px;
+}
+.formulario label {
+  font-size: 1.2rem;
+  margin: 7px 0px 3px 0px;
+}
+.formulario input {
+  font-size: 1rem;
+  height: 2rem;
+  padding: 5px;
+  border: solid 1px #000000;
+  border-radius: 5px;
+  border: solid 1px #000000;
+}
+.formulario textarea {
+  font-size: 1.1rem;
+  padding: 5px;
+  border-radius: 5px;
+  border: solid 1px #000000;
+  height: 150px;
+}
+.formulario input:focus, .formulario textarea:focus {
+  border: solid 1px #88a5fc;
+  outline: none;
+}
+.formulario input::placeholder, .formulario textarea::placeholder {
+  font-size: 1rem;
+  padding: 5px;
+}
+.formulario input:last-child {
+  background-color: #9db6ff;
+  font-weight: 300;
+  color: #ffffff;
+  margin-top: 15px;
+}
+.formulario input:last-child:hover {
+  background-color: #88a5fc;
 }
 
-.carrusel img{
-    aspect-ratio: 4/3;
-    object-fit: cover;
-    scroll-snap-align: center;
+.main_contacto section {
+  font-size: 1.3rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+footer {
+  background-color: #a69171;
+}
+footer h3 {
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: #000000;
+}
+
+.foot a {
+  font-size: 1.3rem;
+  text-decoration: none;
+  color: #000000;
+}
+.foot a:hover {
+  text-decoration: underline;
+}
+
+.foot img {
+  margin-right: 10px;
+  width: 24px;
+}
+
+.line {
+  border-left: solid 1px #000000;
+}
+
+@media screen and (min-width: 2000px) {
+  header {
+    height: 60vh;
+  }
+  header h1 {
+    font-size: 5rem;
+  }
+  .nav-link {
+    font-size: 3rem;
+  }
+  .collapse {
     width: 100%;
+  }
+  .main_nosotros h2 {
+    font-size: 3rem;
+  }
+  .main_nosotros p {
+    font-size: 1.8rem;
+  }
+  .main_contacto section {
+    width: 30%;
+  }
+  .main_contacto aside {
+    width: 25%;
+  }
+  .main_contacto p {
+    font-size: 2.5rem;
+  }
 }
-
-
-.formulario{
-    box-shadow: -2px -2px 15px 0.5px #000000;
-    background-color: #ffffff;
-    display: flex;
-    flex-direction: column;
-    border: solid 1px #000000;
-    border-radius: 15px;
-    padding: 25px;
+@media screen and (max-width: 2000px) {
+  .main_nosotros h2 {
+    font-size: 2.5rem;
+  }
+  .main_nosotros p {
+    font-size: 1.5rem;
+  }
+  .main_contacto p {
+    font-size: 2rem;
+  }
 }
-
-.formulario label{
+@media screen and (max-width: 1440px) {
+  .t_product h2 {
+    font-size: 1.4rem;
+  }
+  .t_product p {
+    font-size: 1rem;
+  }
+  .price_product h3 {
     font-size: 1.2rem;
-    margin: 7px 0px 3px 0px;
-}
-
-.formulario input{
-    font-family: 'Nunito', sans-serif;
+  }
+  .btn-compra {
     font-size: 1rem;
-    height: 2rem;
-    padding: 5px;
-    border: solid 1px #000000;
-    border-radius: 5px;
-    border: solid 1px #000000;
+  }
+  .main_nosotros h2 {
+    font-size: 2.5rem;
+  }
+  .main_nosotros p {
+    font-size: 1.5rem;
+  }
 }
-
-.formulario textarea{
-    font-family: 'Nunito', sans-serif;
-    font-size: 1.1rem;
-    padding: 5px;
-    border-radius: 5px;
-    border: solid 1px #000000;
-    height: 150px;
-}
-
-.formulario input:focus, .formulario textarea:focus{
-    border: solid 1px #88a5fc;
-    outline: none;
-}
-
-.formulario input::placeholder, .formulario textarea::placeholder{
+@media screen and (max-width: 1260px) {
+  .t_product h2 {
     font-size: 1rem;
-    padding: 5px;
+  }
+  .t_product p {
+    font-size: 0.8rem;
+  }
+  .price_product h3 {
+    font-size: 1rem;
+  }
+  .main_nosotros h2 {
+    font-size: 2rem;
+  }
+  .main_nosotros p {
+    font-size: 1.2rem;
+  }
+  .main_contacto p {
+    font-size: 1.5rem;
+  }
 }
-
-.formulario input:last-child{
-    background-color: #9db6ff;
-    font-weight: 300;
-    color: #ffffff;
-    margin-top: 15px;
-}
-
-.formulario input:last-child:hover{
-    background-color: #88a5fc;
-    cursor: pointer;
-}
-
-.main_contacto section{
-    font-size: 1.3rem;
+@media screen and (max-width: 725px) {
+  .nav-link {
+    font-size: 1rem;
+  }
+  header h1 {
+    font-size: 3rem;
+  }
+  .main_index h2 {
+    letter-spacing: 0px;
+    font-size: 1.5rem;
     font-weight: 600;
-    text-align: center;
-}
-
-.redes{
-    display: flex;
-    justify-content: space-around;
-    margin-top: 30px;
-}
-
-footer{background-color: #a69171;}
-
-.foot a{
-    font-size: 1.3rem;
-    text-decoration: none;
-    color: #000000;
-}
-
-footer h3{
-    font-size: 1.6rem;
-    font-weight: 400;
-    color: #000000;
-}
-
-.foot img{
+  }
+  .main_index p {
+    font-size: 1rem;
+    letter-spacing: 1.5px;
+  }
+  .btn-tienda {
+    font-size: 1.2rem;
+  }
+  .t_product:first-child {
+    margin-top: 0px;
+  }
+  .btn-compra {
+    font-size: 1rem;
+  }
+  .fotografo {
+    text-decoration: underline;
+  }
+  .main_nosotros h2 {
+    font-size: 1.8rem;
+  }
+  .main_nosotros p {
+    font-size: 1rem;
+  }
+  .foot a {
+    font-size: 0.9rem;
+  }
+  footer h3 {
+    font-size: 1.2rem;
+  }
+  .foot img {
     margin-right: 10px;
-    width: 24px;
+    width: 18px;
+  }
+}
+@media screen and (min-width: 575px) {
+  .navbar {
+    height: 100%;
+  }
+  header {
+    height: 70vh;
+  }
+}
+@media screen and (max-width: 575px) {
+  .nav-link {
+    margin-bottom: 0.5rem;
+    font-size: 1.4rem;
+  }
+  .t_product h2 {
+    font-size: 0.7rem;
+  }
+  .t_product p {
+    font-size: 0.5rem;
+  }
+  .price_product h3 {
+    font-size: 0.7rem;
+  }
+  .btn-compra {
+    font-size: 0.8rem;
+    height: 1.9rem;
+  }
+  .main_nosotros h2 {
+    font-size: 1.5rem;
+  }
+  .main_nosotros p {
+    font-size: 0.8rem;
+  }
+  .main_contacto p {
+    font-size: 1rem;
+  }
+  .formulario textarea {
+    height: 200px;
+  }
+}
+@media screen and (max-width: 374px) {
+  .container-toggler {
+    width: 25%;
+  }
+  .logo {
+    width: 35%;
+  }
 }
 
-.foot a:hover{text-decoration: underline;}
-
-.line{border-left: solid 1px #000000;}
-
-@media screen and (min-width: 2000px){
-
-    header{height: 60vh;}
-
-    header h1{font-size: 5rem;}
-
-    .nav-link{font-size: 3rem;}
-
-    .collapse{width: 100%;}
-
-    .main_nosotros h2{font-size: 3rem;}
-
-    .main_nosotros p{font-size: 1.8rem;}
-
-    .main_contacto section{width: 30%;}
-
-    .main_contacto aside{width: 25%;}
-
-    .main_contacto p{font-size: 2.5rem;}
-
-
-}
-
-@media screen and (max-width: 2000px){
-
-    .main_nosotros h2{font-size: 2.5rem;}
-
-    .main_nosotros p{font-size: 1.5rem;}
-
-    .main_contacto p{font-size: 2rem;}
-
-}
-
-@media screen and (max-width: 1440px){
-
-    .t_product h2{font-size: 1.4rem;}
-
-    .t_product p{font-size: 1rem;}
-
-    .price_product h3{font-size: 1.2rem;}
-
-    .btn-compra{font-size: 1rem;}
-
-    .main_nosotros h2{font-size: 2.5rem;}
-
-    .main_nosotros p{font-size: 1.5rem;}
-}
-
-@media screen and (max-width: 1260px){
-
-    .t_product h2{font-size: 1rem;}
-
-    .t_product p{font-size: 0.8rem;}
-
-    .price_product h3{font-size: 1rem;}
-    
-    .main_nosotros h2{font-size: 2rem;}
-
-    .main_nosotros p{font-size: 1.2rem;}
-
-    .main_contacto p{font-size: 1.5rem;}
-}
-
-@media screen and (max-width: 725px){
-
-    .nav-link{font-size: 1rem;}
-
-    header h1{font-size: 3rem;}
-
-    .main_index h2{
-        letter-spacing: 0px;
-        font-size: 1.5rem;
-        font-weight: 600;
-    }
-
-    .main_index p{
-        font-size: 1rem;
-        letter-spacing: 1.5px;
-    }
-
-    .btn-tienda{font-size: 1.2rem;}
-
-    .t_product:first-child{margin-top: 0px;}
-
-    .btn-compra{font-size: 1rem;}
-
-    .fotografo{text-decoration: underline;}
-
-    .main_nosotros h2{font-size: 1.8rem;}
-
-    .main_nosotros p{font-size: 1rem;}
-
-    .foot a{font-size: 0.9rem;}
-    
-    footer h3{font-size: 1.2rem;}
-    
-    .foot img{
-        margin-right: 10px;
-        width: 18px;
-    }
-}
-
-@media screen and (min-width: 575px){
-
-    .navbar{height: 100%;}
-    
-    header{height: 70vh;}
-}
-
-@media screen and (max-width: 575px){
-
-    .nav-link{
-        margin-bottom: 0.5rem;
-        font-size: 1.4rem;
-    }
-
-    .t_product h2{font-size: 0.7rem;}
-
-    .t_product p{font-size: 0.5rem;}
-
-    .price_product h3{font-size: 0.7rem;}
-
-    .btn-compra{
-        font-size: 0.8rem;
-        height: 1.9rem;
-    }
-
-    .main_nosotros h2{font-size: 1.5rem;}
-
-    .main_nosotros p{font-size: 0.8rem;}
-
-    .main_contacto p{font-size: 1rem;}
-
-    .formulario textarea{height: 200px;}
-}
-@media screen and (max-width: 374px){
-
-    .container-toggler{width: 25%;}
-
-    .logo{width: 35%;}
-
-}
+/*# sourceMappingURL=styles.css.map */
