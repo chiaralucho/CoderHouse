@@ -72,14 +72,14 @@ header .row, header .nav {
   font-size: 1.5rem;
 }
 
-.btn, .btn-compra, .btn-tienda {
+.btn, .formulario input:last-child, .btn-compra, .btn-tienda {
   color: #ffffff;
   text-decoration: none;
   background-color: #718FA6;
   border: solid 1px #000000;
   border-radius: 10px;
 }
-.btn:hover, .btn-compra:hover, .btn-tienda:hover {
+.btn:hover, .formulario input:hover:last-child, .btn-compra:hover, .btn-tienda:hover {
   background-color: #8aaec9;
 }
 
@@ -184,13 +184,7 @@ header .row, header .nav {
   padding: 5px;
 }
 .formulario input:last-child {
-  background-color: #9db6ff;
-  font-weight: 300;
-  color: #ffffff;
   margin-top: 15px;
-}
-.formulario input:last-child:hover {
-  background-color: #88a5fc;
 }
 
 .main_contacto section {
