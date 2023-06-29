@@ -1,7 +1,6 @@
 html, body {
   min-height: 100%;
   font-family: "Nunito", sans-serif;
-  letter-spacing: 1px;
 }
 
 header {
@@ -9,11 +8,14 @@ header {
 }
 header h1 {
   font-family: "Oooh Baby", cursive;
-  font-size: 4rem;
   color: rgba(209, 209, 209, 0.8784313725);
 }
 header .row, header .nav {
   height: 100%;
+}
+
+.collapse {
+  width: 100%;
 }
 
 .navbar-toggler {
@@ -56,7 +58,6 @@ header .row, header .nav {
 .nav-link {
   text-decoration: none;
   color: #ffffff;
-  font-size: 1.4rem;
 }
 
 .logo {
@@ -65,52 +66,37 @@ header .row, header .nav {
 }
 
 .main_index h2 {
-  font-size: 2rem;
   font-weight: 600;
-}
-.main_index p {
-  font-size: 1.5rem;
 }
 
 .btn, .formulario input:last-child, .btn-compra, .btn-tienda {
+  height: auto;
   color: #ffffff;
   text-decoration: none;
   background-color: #718FA6;
   border: solid 1px #000000;
-  border-radius: 10px;
+  border-radius: 1000000px;
+  padding: 0.3rem 1rem;
 }
 .btn:hover, .formulario input:hover:last-child, .btn-compra:hover, .btn-tienda:hover {
   background-color: #8aaec9;
 }
 
 .btn-tienda {
-  font-size: 1.5rem;
   font-weight: 500;
-  padding: 0.3rem 1rem;
 }
 
 .t_product {
-  border-radius: 10px;
   box-shadow: -2px -2px 15px 0.5px #000000;
   margin-top: 4rem;
   height: auto;
 }
 .t_product h2 {
-  font-size: 2rem;
   font-weight: bolder;
-}
-.t_product p {
-  font-size: 1.3rem;
 }
 
 .price_product h3 {
-  font-size: 2rem;
   font-weight: 600;
-}
-
-.btn-compra {
-  height: 2.5rem;
-  font-size: 1.5rem;
 }
 
 .product_photo {
@@ -132,55 +118,87 @@ header .row, header .nav {
 }
 
 .carrusel {
-  display: flex;
-  padding: 0px;
   box-shadow: -2px -2px 15px 0.5px #000000;
   border-radius: 10px;
-  overflow-x: hidden;
-  scroll-snap-type: x mandatory;
   overflow: hidden;
 }
+.carrusel ul {
+  width: 600%;
+  animation: slide 30s infinite;
+}
+.carrusel li {
+  width: 100%;
+  list-style: none;
+}
 .carrusel img {
-  aspect-ratio: 4/3;
   object-fit: cover;
-  scroll-snap-align: center;
   width: 100%;
 }
 
+@keyframes slide {
+  0% {
+    margin-left: 0;
+  }
+  13% {
+    margin-left: 0;
+  }
+  16% {
+    margin-left: -100%;
+  }
+  29% {
+    margin-left: -100%;
+  }
+  32% {
+    margin-left: -200%;
+  }
+  45% {
+    margin-left: -200%;
+  }
+  48% {
+    margin-left: -300%;
+  }
+  61% {
+    margin-left: -300%;
+  }
+  64% {
+    margin-left: -400%;
+  }
+  77% {
+    margin-left: -400%;
+  }
+  80% {
+    margin-left: -500%;
+  }
+  93% {
+    margin-left: -500%;
+  }
+}
 .formulario {
   box-shadow: -2px -2px 15px 0.5px #000000;
   background-color: #ffffff;
   display: flex;
   flex-direction: column;
   border: solid 1px #000000;
-  border-radius: 15px;
   padding: 25px;
 }
 .formulario label {
-  font-size: 1.2rem;
   margin: 7px 0px 3px 0px;
 }
 .formulario input {
-  font-size: 1rem;
-  height: 2rem;
-  padding: 5px;
+  height: auto;
   border: solid 1px #000000;
   border-radius: 5px;
   border: solid 1px #000000;
 }
 .formulario textarea {
-  font-size: 1.1rem;
-  padding: 5px;
   border-radius: 5px;
   border: solid 1px #000000;
-  height: 150px;
 }
 .formulario input:focus, .formulario textarea:focus {
   border: solid 1px #88a5fc;
   outline: none;
 }
 .formulario input::placeholder, .formulario textarea::placeholder {
-  font-size: 1rem;
   padding: 5px;
 }
 .formulario input:last-child {
@@ -188,22 +206,22 @@ header .row, header .nav {
 }
 
 .main_contacto section {
-  font-size: 1.3rem;
   font-weight: 600;
   text-align: center;
+}
+.main_contacto section a img {
+  width: 100%;
 }
 
 footer {
   background-color: #a69171;
 }
 footer h3 {
-  font-size: 1.6rem;
   font-weight: 400;
   color: #000000;
 }
 
 .foot a {
-  font-size: 1.3rem;
   text-decoration: none;
   color: #000000;
 }
@@ -213,7 +231,6 @@ footer h3 {
 
 .foot img {
   margin-right: 10px;
-  width: 24px;
 }
 
 .line {
@@ -225,123 +242,334 @@ footer h3 {
     height: 60vh;
   }
   header h1 {
-    font-size: 5rem;
+    font-size: 10rem;
   }
   .nav-link {
+    font-size: 4rem;
+  }
+  .main_index h2 {
+    font-size: 4rem;
+  }
+  .main_index p {
     font-size: 3rem;
   }
-  .collapse {
-    width: 100%;
+  .btn-tienda {
+    font-size: 4rem;
+  }
+  .t_product {
+    border-radius: 25px;
+  }
+  .t_product h2 {
+    font-size: 3rem;
+  }
+  .t_product p {
+    font-size: 3rem;
+  }
+  .price_product h3 {
+    font-size: 3rem;
+  }
+  .price_product img {
+    width: 10%;
+  }
+  .btn-compra {
+    font-size: 2.5rem;
+  }
+  .main_galeria p {
+    font-size: 3rem;
+  }
+  .fotografo {
+    font-size: 3rem;
   }
   .main_nosotros h2 {
-    font-size: 3rem;
+    font-size: 4rem;
   }
   .main_nosotros p {
-    font-size: 1.8rem;
+    font-size: 3rem;
   }
   .main_contacto section {
     width: 30%;
   }
-  .main_contacto aside {
-    width: 25%;
-  }
   .main_contacto p {
+    font-size: 3rem;
+  }
+  .redes a {
+    width: 7%;
+  }
+  .formulario {
+    border-radius: 25px;
+  }
+  .formulario label {
     font-size: 2.5rem;
+  }
+  .formulario input {
+    border-radius: 15px;
+    font-size: 2.5rem;
+  }
+  .formulario textarea {
+    height: 300px;
+    border-radius: 15px;
+    font-size: 2.5rem;
+  }
+  .formulario input::placeholder, .formulario textarea::placeholder {
+    font-size: 2.5rem;
+  }
+  footer h3 {
+    font-size: 4rem;
+  }
+  .foot a {
+    font-size: 3rem;
+  }
+  .foot img {
+    width: 50px;
   }
 }
 @media screen and (max-width: 2000px) {
-  .main_nosotros h2 {
+  header h1 {
+    font-size: 7rem;
+  }
+  .nav-link {
     font-size: 2.5rem;
   }
+  .main_index h2 {
+    font-size: 3.5rem;
+  }
+  .main_index p {
+    font-size: 2.5rem;
+  }
+  .btn-tienda {
+    font-size: 2.3rem;
+  }
+  .t_product {
+    border-radius: 20px;
+  }
+  .t_product h2 {
+    font-size: 1.8rem;
+  }
+  .t_product p {
+    font-size: 1.8rem;
+  }
+  .price_product h3 {
+    font-size: 1.8rem;
+  }
+  .btn-compra {
+    font-size: 1.8rem;
+  }
+  .main_galeria p {
+    font-size: 2.5rem;
+  }
+  .fotografo {
+    font-size: 2.5rem;
+  }
+  .main_nosotros h2 {
+    font-size: 3.5rem;
+  }
   .main_nosotros p {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
   }
   .main_contacto p {
-    font-size: 2rem;
+    font-size: 1rem;
+  }
+  .redes a {
+    width: 7%;
+  }
+  .formulario {
+    border-radius: 15px;
+  }
+  .formulario label {
+    font-size: 1.8rem;
+  }
+  .formulario input {
+    border-radius: 5px;
+    font-size: 1.8rem;
+  }
+  .formulario textarea {
+    height: 300px;
+    border-radius: 5px;
+    font-size: 1.8rem;
+  }
+  .formulario input::placeholder, .formulario textarea::placeholder {
+    font-size: 1.8rem;
+  }
+  footer h3 {
+    font-size: 2.3rem;
+  }
+  .foot a {
+    font-size: 1.8rem;
+  }
+  .foot img {
+    width: 45px;
   }
 }
-@media screen and (max-width: 1440px) {
+@media screen and (max-width: 1400px) {
+  header h1 {
+    font-size: 6rem;
+  }
+  .nav-link {
+    font-size: 1.8rem;
+  }
+  .main_index p {
+    font-size: 1.8rem;
+  }
+  .main_index h2 {
+    font-size: 2.3rem;
+  }
+  .btn-tienda {
+    font-size: 2rem;
+  }
   .t_product h2 {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
+  }
+  .t_product p {
+    font-size: 1.3rem;
+  }
+  .price_product h3 {
+    font-size: 1.3rem;
+  }
+  .btn-compra {
+    font-size: 1.3rem;
+  }
+  .main_galeria p {
+    font-size: 1.8rem;
+  }
+  .fotografo {
+    font-size: 1.8rem;
+  }
+  .main_nosotros h2 {
+    font-size: 1.8rem;
+  }
+  .main_nosotros p {
+    font-size: 1.3rem;
+  }
+  .formulario label {
+    font-size: 1.8rem;
+  }
+  .formulario input {
+    font-size: 1.8rem;
+  }
+  .formulario input::placeholder, .formulario textarea::placeholder {
+    font-size: 1.8rem;
+  }
+  .formulario textarea {
+    font-size: 1.8rem;
+  }
+  footer h3 {
+    font-size: 2.3rem;
+  }
+  .foot a {
+    font-size: 1.8rem;
+  }
+  .foot img {
+    width: 36px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  header h1 {
+    font-size: 5rem;
+  }
+  .nav-link {
+    font-size: 1.3rem;
+  }
+  .main_index h2 {
+    font-size: 2rem;
+  }
+  .main_index p {
+    font-size: 1.3rem;
+  }
+  .btn-tienda {
+    font-size: 1.5rem;
+  }
+  .t_product {
+    border-radius: 10px;
+  }
+  .t_product h2 {
+    font-size: 1rem;
   }
   .t_product p {
     font-size: 1rem;
   }
   .price_product h3 {
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
   .btn-compra {
     font-size: 1rem;
   }
-  .main_nosotros h2 {
-    font-size: 2.5rem;
+  .main_galeria p {
+    font-size: 1.3rem;
   }
-  .main_nosotros p {
-    font-size: 1.5rem;
-  }
-}
-@media screen and (max-width: 1260px) {
-  .t_product h2 {
-    font-size: 1rem;
-  }
-  .t_product p {
-    font-size: 0.8rem;
-  }
-  .price_product h3 {
-    font-size: 1rem;
+  .fotografo {
+    font-size: 1.3rem;
   }
   .main_nosotros h2 {
     font-size: 2rem;
   }
   .main_nosotros p {
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
-  .main_contacto p {
-    font-size: 1.5rem;
+  footer h3 {
+    font-size: 2rem;
+  }
+  .foot a {
+    font-size: 1.3rem;
+  }
+  .foot img {
+    width: 26px;
   }
 }
-@media screen and (max-width: 725px) {
+@media screen and (max-width: 768px) {
+  header h1 {
+    font-size: 4rem;
+  }
   .nav-link {
     font-size: 1rem;
   }
-  header h1 {
-    font-size: 3rem;
-  }
   .main_index h2 {
-    letter-spacing: 0px;
     font-size: 1.5rem;
     font-weight: 600;
   }
   .main_index p {
     font-size: 1rem;
-    letter-spacing: 1.5px;
   }
   .btn-tienda {
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
   .t_product:first-child {
     margin-top: 0px;
   }
-  .btn-compra {
+  .main_galeria p {
     font-size: 1rem;
   }
   .fotografo {
+    font-size: 1rem;
     text-decoration: underline;
   }
   .main_nosotros h2 {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
   }
   .main_nosotros p {
+    font-size: 0.7rem;
+  }
+  .formulario label {
     font-size: 1rem;
   }
-  .foot a {
-    font-size: 0.9rem;
+  .formulario input {
+    font-size: 1rem;
+  }
+  .formulario input::placeholder, .formulario textarea::placeholder {
+    font-size: 1rem;
+  }
+  .formulario textarea {
+    font-size: 1rem;
+  }
+  .redes a {
+    width: 5%;
   }
   footer h3 {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
+  }
+  .foot a {
+    font-size: 1rem;
   }
   .foot img {
-    margin-right: 10px;
     width: 18px;
   }
 }
@@ -354,34 +582,58 @@ footer h3 {
   }
 }
 @media screen and (max-width: 575px) {
+  header h1 {
+    font-size: 3rem;
+  }
   .nav-link {
+    font-size: 1.3rem;
     margin-bottom: 0.5rem;
-    font-size: 1.4rem;
+  }
+  .main_index h2 {
+    font-size: 1rem;
+  }
+  .main_index p {
+    font-size: 1rem;
+  }
+  .btn-tienda {
+    font-size: 1rem;
   }
   .t_product h2 {
-    font-size: 0.7rem;
+    font-size: 1rem;
   }
   .t_product p {
-    font-size: 0.5rem;
+    font-size: 0.7rem;
   }
   .price_product h3 {
     font-size: 0.7rem;
   }
   .btn-compra {
-    font-size: 0.8rem;
-    height: 1.9rem;
-  }
-  .main_nosotros h2 {
-    font-size: 1.5rem;
-  }
-  .main_nosotros p {
-    font-size: 0.8rem;
+    font-size: 0.7rem;
   }
   .main_contacto p {
-    font-size: 1rem;
+    font-size: 0.7rem;
+  }
+  .redes a {
+    width: 7%;
+  }
+  .formulario label {
+    font-size: 0.7rem;
+  }
+  .formulario input {
+    font-size: 0.7rem;
+  }
+  .formulario input::placeholder, .formulario textarea::placeholder {
+    font-size: 0.7rem;
   }
   .formulario textarea {
+    font-size: 0.7rem;
     height: 200px;
+  }
+  footer h3 {
+    font-size: 1rem;
+  }
+  .foot a {
+    font-size: 0.7rem;
   }
 }
 @media screen and (max-width: 374px) {

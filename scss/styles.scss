@@ -1,31 +1,26 @@
-$pagesBg:(
-    inicio: center,
-    tienda: center,
-    galeria: 58%,
-    nosotros: 67%,
-    contacto: 59%
-);
+@import "bgMap";
+@import "fonts";
+
 html,body{
     min-height: 100%;
     font-family: 'Nunito', sans-serif;
-    letter-spacing: 1px;
 }
 
 header{
     overflow: hidden;
     h1{
         font-family: 'Oooh Baby', cursive;
-        font-size: 4rem;
         color: #d1d1d1e0;
     }
     .row, .nav{height: 100%;}
 }
+
+.collapse{width: 100%;}
+
 //menu hamburguesa
 .navbar-toggler{
     border-color: #ffffff;
-    &focus{
-        box-shadow: none;
-    }
+    &focus{box-shadow: none;}
 }
 
 //header backgrounds
@@ -40,57 +35,44 @@ header{
 .nav-link{
     text-decoration: none;
     color: #ffffff;
-    font-size: 1.4rem;
 }
+
 .logo{
     aspect-ratio: 1/1;
     object-fit: contain;
 }
 
 .main_index{
-    h2{
-        font-size: 2rem;
-        font-weight: 600;
-    }
-    p{font-size: 1.5rem;}
+    h2{font-weight: 600;}
 }
+
+//generalButtons
 .btn{
+    height: auto;
     color: #ffffff;
     text-decoration: none;
     background-color: #718FA6;
     border: solid 1px #000000;
-    border-radius: 10px;
+    border-radius: 1000000px;
+    padding: 0.3rem 1rem;
     &:hover{background-color: #8aaec9;}
 }
+
 .btn-tienda{
     @extend .btn;
-    font-size: 1.5rem;
     font-weight: 500;
-    padding: 0.3rem 1rem;
 }
 
 .t_product{
-    border-radius: 10px;
     box-shadow: -2px -2px 15px 0.5px #000000;
     margin-top: 4rem;
     height: auto;
-    h2{
-        font-size: 2rem;
-        font-weight: bolder; 
-    }
-    p{font-size: 1.3rem;}
-}
-.price_product h3{
-    font-size: 2rem;
-    font-weight: 600;
+    h2{font-weight: bolder;}
 }
 
-.btn-compra{
-    @extend .btn;
-    height: 2.5rem;
-    font-size: 1.5rem;
-}
+.price_product h3{font-weight: 600;}
 
+.btn-compra{@extend .btn;}
 
 .product_photo{
     border-radius: 10px 0px 0px 10px;
@@ -109,185 +91,344 @@ header{
 }
 
 .carrusel{
-    display: flex;
-    padding: 0px;
     box-shadow: -2px -2px 15px 0.5px #000000;
     border-radius: 10px;
-    overflow-x: hidden;
-    scroll-snap-type: x mandatory;
     overflow: hidden;
+    ul{
+        width: 600%; //100% * photo
+        animation: slide 30s infinite;
+    }
+    li{
+        width: 100%;
+        list-style: none;
+    }
     img{
-        aspect-ratio: 4/3;
+
         object-fit: cover;
-        scroll-snap-align: center;
         width: 100%;
     }
 }
+
+@keyframes slide{//start 1sec-slide(3.3%) & 4sec-photo(13.3%)
+    //1st photo
+    0%{margin-left: 0;}
+    13%{margin-left: 0;}
+    //2nd photo
+    16%{margin-left: -100%;}
+    29%{margin-left: -100%;}
+    //3rd photo
+    32%{margin-left: -200%;}
+    45%{margin-left: -200%;}
+    //4th photo
+    48%{margin-left: -300%;}
+    61%{margin-left: -300%;}
+    //5th photo
+    64%{margin-left: -400%;}
+    77%{margin-left: -400%;}
+    //6th photo
+    80%{margin-left: -500%;}
+    93%{margin-left: -500%;}
+}
+
 .formulario{
     box-shadow: -2px -2px 15px 0.5px #000000;
     background-color: #ffffff;
     display: flex;
     flex-direction: column;
     border: solid 1px #000000;
-    border-radius: 15px;
     padding: 25px;
-    label{
-        font-size: 1.2rem;
-        margin: 7px 0px 3px 0px;
-    }
+    label{margin: 7px 0px 3px 0px;}
+
     input{
-        font-size: 1rem;
-        height: 2rem;
-        padding: 5px;
+        height: auto;
         border: solid 1px #000000;
         border-radius: 5px;
         border: solid 1px #000000;
     }
-    textarea{
-        font-size: 1.1rem;
-        padding: 5px;
+
+    textarea{ 
         border-radius: 5px;
         border: solid 1px #000000;
-        height: 150px;
     }
+
     input:focus, textarea:focus{
         border: solid 1px #88a5fc;
         outline: none;
     }
-    input::placeholder, textarea::placeholder{
-        font-size: 1rem;
-        padding: 5px;
-    }
+
+    input::placeholder, textarea::placeholder{padding: 5px;}
+
     input:last-child{
         @extend .btn;
         margin-top: 15px;
     }
 }
+
 .main_contacto section{
-    font-size: 1.3rem;
     font-weight: 600;
     text-align: center;
+    a img{width: 100%}
 }
+
 footer{
     background-color: #a69171;
     h3{
-        font-size: 1.6rem;
         font-weight: 400;
         color: #000000;
     }
 }
 
 .foot a{
-    font-size: 1.3rem;
     text-decoration: none;
     color: #000000;
     &:hover{text-decoration: underline;}
 }
-.foot img{
-    margin-right: 10px;
-    width: 24px;
-}
+
+.foot img{margin-right: 10px;}
+
 .line{border-left: solid 1px #000000;}
+
 @media screen and (min-width: 2000px){
 
     header{height: 60vh;}
 
-    header h1{font-size: 5rem;}
+    header h1{font-size: 10rem;}
 
-    .nav-link{font-size: 3rem;}
+    .nav-link{font-size: $title_fsize_xxxl;}
 
-    .collapse{width: 100%;}
+    .main_index h2{font-size: $title_fsize_xxxl;}
 
-    .main_nosotros h2{font-size: 3rem;}
+    .main_index p{font-size: $text_fsize_xxxl;}
 
-    .main_nosotros p{font-size: 1.8rem;}
+    .btn-tienda{font-size: $title_fsize_xxxl;}
+
+    .t_product{border-radius: 25px;}
+
+    .t_product h2{font-size: $text_fsize_xxxl;}
+
+    .t_product p{font-size: $text_fsize_xxxl;}
+
+    .price_product h3{font-size: $text_fsize_xxxl;}
+
+    .price_product img{width: 10%;}
+
+    .btn-compra{font-size: $text_fsize_xxl;}
+
+    .main_galeria p{font-size: $text_fsize_xxxl;}
+
+    .fotografo{font-size: $text_fsize_xxxl;}
+
+    .main_nosotros h2{font-size: $title_fsize_xxxl;}
+
+    .main_nosotros p{font-size: $text_fsize_xxxl;}
 
     .main_contacto section{width: 30%;}
 
-    .main_contacto aside{width: 25%;}
+    .main_contacto p{font-size: $text_fsize_xxxl;}
 
-    .main_contacto p{font-size: 2.5rem;}
+    .redes a  {width: 7%;}
 
+    .formulario{
+        border-radius: 25px;
+        label{font-size: $text_fsize_xxl;}
+        input{
+            border-radius: 15px;
+            font-size: $text_fsize_xxl;
+        }
+        textarea{
+            height: 300px;
+            border-radius: 15px;
+            font-size: $text_fsize_xxl;
+        }
+        input::placeholder, textarea::placeholder{font-size: $text_fsize_xxl;}
+    } 
 
+    footer h3{font-size: $title_fsize_xxxl;}
+
+    .foot a{font-size: $text_fsize_xxxl;}
+
+    .foot img{width: 50px;}
 }
 
 @media screen and (max-width: 2000px){
 
-    .main_nosotros h2{font-size: 2.5rem;}
+    header h1{font-size: 7rem;}
 
-    .main_nosotros p{font-size: 1.5rem;}
+    .nav-link{font-size: $text_fsize_xxl;}
 
-    .main_contacto p{font-size: 2rem;}
+    .main_index h2{font-size: $title_fsize_xxl;}
 
+    .main_index p{font-size: $text_fsize_xxl;}
+
+    .btn-tienda{font-size: $title_fsize_xl;}
+
+    .t_product{border-radius: 20px;}
+
+    .t_product h2{font-size: $text_fsize_xl;}
+
+    .t_product p{font-size: $text_fsize_xl;}
+
+    .price_product h3{font-size: $text_fsize_xl;}
+
+    .btn-compra{font-size: $text_fsize_xl;}
+
+    .main_galeria p{font-size: $text_fsize_xxl;}
+
+    .fotografo{font-size: $text_fsize_xxl;}
+
+    .main_nosotros h2{font-size: $title_fsize_xxl;}
+
+    .main_nosotros p{font-size: $text_fsize_xl;}
+
+    .main_contacto p{font-size: $text_fsize_sm;}
+
+    .redes a{width: 7%;}
+
+    .formulario{
+        border-radius: 15px;
+        label{font-size: $text_fsize_xl;}
+        input{
+            border-radius: 5px;
+            font-size: $text_fsize_xl;
+        }
+        textarea{
+            height: 300px;
+            border-radius: 5px;
+            font-size: $text_fsize_xl;
+        }
+        input::placeholder, textarea::placeholder{font-size: $text_fsize_xl;}
+    } 
+
+    footer h3{font-size: $title_fsize_xl;}
+
+    .foot a{font-size: $text_fsize_xl;}
+
+    .foot img{width: 45px;}
 }
 
-@media screen and (max-width: 1440px){
+@media screen and (max-width: 1400px){
 
-    .t_product h2{font-size: 1.4rem;}
+    header h1{font-size: 6rem;}
 
-    .t_product p{font-size: 1rem;}
+    .nav-link{font-size: $text_fsize_xl;}
 
-    .price_product h3{font-size: 1.2rem;}
+    .main_index p{font-size: $text_fsize_xl;}
 
-    .btn-compra{font-size: 1rem;}
-
-    .main_nosotros h2{font-size: 2.5rem;}
-
-    .main_nosotros p{font-size: 1.5rem;}
-}
-
-@media screen and (max-width: 1260px){
-
-    .t_product h2{font-size: 1rem;}
-
-    .t_product p{font-size: 0.8rem;}
-
-    .price_product h3{font-size: 1rem;}
+    .main_index h2{font-size: $title_fsize_xl;}
     
-    .main_nosotros h2{font-size: 2rem;}
+    .btn-tienda{font-size: $title_fsize_md;}
 
-    .main_nosotros p{font-size: 1.2rem;}
+    .t_product h2{font-size: $text_fsize_md;}
 
-    .main_contacto p{font-size: 1.5rem;}
+    .t_product p{font-size: $text_fsize_md;}
+
+    .price_product h3{font-size: $text_fsize_md;}
+
+    .btn-compra{font-size: $text_fsize_md;}
+
+    .main_galeria p{font-size: $text_fsize_xl;}
+
+    .fotografo{font-size: $text_fsize_xl;}
+
+    .main_nosotros h2{font-size: $text_fsize_xl;}
+
+    .main_nosotros p{font-size: $text_fsize_md;}
+
+    .formulario label{font-size: $text_fsize_xl;}
+
+    .formulario input{font-size: $text_fsize_xl;}
+
+    .formulario input::placeholder, .formulario textarea::placeholder{font-size: $text_fsize_xl;}
+
+    .formulario textarea{font-size: $text_fsize_xl;}
+
+    footer h3{font-size: $title_fsize_xl;}
+
+    .foot a{font-size: $text_fsize_xl;}
+
+    .foot img{width: 36px;}
 }
 
-@media screen and (max-width: 725px){
+@media screen and (max-width: 1200px){
 
-    .nav-link{font-size: 1rem;}
+    header h1{font-size: 5rem;}
 
-    header h1{font-size: 3rem;}
+    .nav-link{font-size: $text_fsize_md;}
+
+    .main_index h2{font-size: $title_fsize_md;}
+
+    .main_index p{font-size: $text_fsize_md;}
+
+    .btn-tienda{font-size: $title_fsize_sm;}
+    
+    .t_product{border-radius: 10px;}
+
+    .t_product h2{font-size: $text_fsize_sm;}
+
+    .t_product p{font-size: $text_fsize_sm;}
+
+    .price_product h3{font-size: $text_fsize_sm;}
+
+    .btn-compra{font-size: $text_fsize_sm;}
+
+    .main_galeria p{font-size: $text_fsize_md;}
+
+    .fotografo{font-size: $text_fsize_md;}
+    
+    .main_nosotros h2{font-size: $title_fsize_md;}
+
+    .main_nosotros p{font-size: $text_fsize_sm;}
+
+    footer h3{font-size: $title_fsize_md;}
+
+    .foot a{font-size: $text_fsize_md;}
+
+    .foot img{width: 26px;}
+}
+
+@media screen and (max-width: 768px){
+
+    header h1{font-size: 4rem;}
+
+    .nav-link{font-size: $text_fsize_sm;}
 
     .main_index h2{
-        letter-spacing: 0px;
-        font-size: 1.5rem;
+        font-size: $title_fsize_sm;
         font-weight: 600;
     }
 
-    .main_index p{
-        font-size: 1rem;
-        letter-spacing: 1.5px;
-    }
+    .main_index p{font-size: $text_fsize_sm;}
 
-    .btn-tienda{font-size: 1.2rem;}
+    .btn-tienda{font-size: $text_fsize_sm;}
 
     .t_product:first-child{margin-top: 0px;}
 
-    .btn-compra{font-size: 1rem;}
+    .main_galeria p{font-size: $text_fsize_sm;}
 
-    .fotografo{text-decoration: underline;}
-
-    .main_nosotros h2{font-size: 1.8rem;}
-
-    .main_nosotros p{font-size: 1rem;}
-
-    .foot a{font-size: 0.9rem;}
-    
-    footer h3{font-size: 1.2rem;}
-    
-    .foot img{
-        margin-right: 10px;
-        width: 18px;
+    .fotografo{
+        font-size: $text_fsize_sm;
+        text-decoration: underline;
     }
+
+    .main_nosotros h2{font-size: $title_fsize_sm;}
+
+    .main_nosotros p{font-size: $text_fsize_ssm;}
+
+    .formulario label{font-size: $text_fsize_sm;}
+
+    .formulario input{font-size: $text_fsize_sm;}
+
+    .formulario input::placeholder, .formulario textarea::placeholder{font-size: $text_fsize_sm;}
+
+    .formulario textarea{font-size: $text_fsize_sm;}
+
+    .redes a{width: 5%;}
+
+    footer h3{font-size: $title_fsize_sm;}
+
+    .foot a{font-size: $text_fsize_sm;}
+
+    .foot img{width: 18px;}
 }
 
 @media screen and (min-width: 575px){
@@ -299,30 +440,47 @@ footer{
 
 @media screen and (max-width: 575px){
 
+    header h1{font-size: 3rem;}
+
     .nav-link{
+        font-size: $text_fsize_md;
         margin-bottom: 0.5rem;
-        font-size: 1.4rem;
     }
 
-    .t_product h2{font-size: 0.7rem;}
+    .main_index h2{font-size: $title_fsize_ssm;}
 
-    .t_product p{font-size: 0.5rem;}
+    .main_index p{font-size: $title_fsize_ssm;}
 
-    .price_product h3{font-size: 0.7rem;}
+    .btn-tienda{font-size: $title_fsize_ssm;}
 
-    .btn-compra{
-        font-size: 0.8rem;
-        height: 1.9rem;
+    .t_product h2{font-size: $title_fsize_ssm;}
+
+    .t_product p{font-size: $text_fsize_ssm;}
+
+    .price_product h3{font-size: $text_fsize_ssm;}
+
+    .btn-compra{font-size: $text_fsize_ssm;}
+
+    .main_contacto p{font-size: $text_fsize_ssm;}
+
+    .redes a{width: 7%;}
+
+    .formulario label{font-size: $text_fsize_ssm;}
+
+    .formulario input{font-size: $text_fsize_ssm;}
+
+    .formulario input::placeholder, .formulario textarea::placeholder{font-size: $text_fsize_ssm;}
+
+    .formulario textarea{
+        font-size: $text_fsize_ssm;
+        height: 200px;
     }
 
-    .main_nosotros h2{font-size: 1.5rem;}
+    footer h3{font-size: $title_fsize_ssm;}
 
-    .main_nosotros p{font-size: 0.8rem;}
-
-    .main_contacto p{font-size: 1rem;}
-
-    .formulario textarea{height: 200px;}
+    .foot a{font-size: $text_fsize_ssm;}
 }
+
 @media screen and (max-width: 374px){
 
     .container-toggler{width: 25%;}
