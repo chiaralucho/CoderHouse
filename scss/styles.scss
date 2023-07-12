@@ -67,7 +67,10 @@ header{
     box-shadow: -2px -2px 15px 0.5px #000000;
     margin-top: 4rem;
     height: auto;
-    h2{font-weight: bolder;}
+    h2{
+        font-weight: bolder;
+        text-decoration: underline;
+    }
 }
 
 .price_product h3{font-weight: 600;}
@@ -78,13 +81,20 @@ header{
     border-radius: 10px 0px 0px 10px;
     object-fit: cover;
 }
-  
+
+.whatsapp{
+    width: 5%;
+    position: fixed;
+    bottom: 40px;
+    left: 10px;
+}
+
 .galeria img{
     box-shadow: -1px -1px 10px 0.5px #000000;
     border-radius: 15px;
 }
   
-.fotografo{
+.fotografo a{
     color: #000000;
     text-decoration: none;
     &:hover{text-decoration: underline;}
@@ -95,15 +105,16 @@ header{
     border-radius: 10px;
     overflow: hidden;
     ul{
+
         width: 600%; //100% * photo
-        animation: slide 30s infinite;
+
     }
     li{
         width: 100%;
         list-style: none;
     }
     img{
-
+        animation: slide 30s infinite;
         object-fit: cover;
         width: 100%;
     }
@@ -128,6 +139,11 @@ header{
     //6th photo
     80%{margin-left: -500%;}
     93%{margin-left: -500%;}
+}
+
+.main_nosotros h2{
+    font-weight: bolder;
+    text-decoration: underline;
 }
 
 .formulario{
@@ -164,7 +180,7 @@ header{
     }
 }
 
-.main_contacto section{
+.redes{
     font-weight: 600;
     text-align: center;
     a img{width: 100%}
@@ -172,10 +188,7 @@ header{
 
 footer{
     background-color: #a69171;
-    h3{
-        font-weight: 400;
-        color: #000000;
-    }
+    h3{color: #000000;}
 }
 
 .foot a{
@@ -192,77 +205,17 @@ footer{
 
     header{height: 60vh;}
 
-    header h1{font-size: 10rem;}
-
-    .nav-link{font-size: $title_fsize_xxxl;}
-
-    .main_index h2{font-size: $title_fsize_xxxl;}
-
-    .main_index p{font-size: $text_fsize_xxxl;}
-
-    .btn-tienda{font-size: $title_fsize_xxxl;}
-
-    .t_product{border-radius: 25px;}
-
-    .t_product h2{font-size: $text_fsize_xxxl;}
-
-    .t_product p{font-size: $text_fsize_xxxl;}
-
-    .price_product h3{font-size: $text_fsize_xxxl;}
-
-    .price_product img{width: 10%;}
-
-    .btn-compra{font-size: $text_fsize_xxl;}
-
-    .main_galeria p{font-size: $text_fsize_xxxl;}
-
-    .fotografo{font-size: $text_fsize_xxxl;}
-
-    .main_nosotros h2{font-size: $title_fsize_xxxl;}
-
-    .main_nosotros p{font-size: $text_fsize_xxxl;}
-
-    .main_contacto section{width: 30%;}
-
-    .main_contacto p{font-size: $text_fsize_xxxl;}
-
-    .redes a  {width: 7%;}
-
-    .formulario{
-        border-radius: 25px;
-        label{font-size: $text_fsize_xxl;}
-        input{
-            border-radius: 15px;
-            font-size: $text_fsize_xxl;
-        }
-        textarea{
-            height: 300px;
-            border-radius: 15px;
-            font-size: $text_fsize_xxl;
-        }
-        input::placeholder, textarea::placeholder{font-size: $text_fsize_xxl;}
-    } 
-
-    footer h3{font-size: $title_fsize_xxxl;}
-
-    .foot a{font-size: $text_fsize_xxxl;}
-
-    .foot img{width: 50px;}
-}
-
-@media screen and (max-width: 2000px){
-
     header h1{font-size: 7rem;}
 
-    .nav-link{font-size: $text_fsize_xxl;}
+    .nav-link{font-size: $title_fsize_xxl;}
 
-    .main_index h2{font-size: $title_fsize_xxl;}
+    .main_index h2{font-size: $title_fsize_lg;}
 
-    .main_index p{font-size: $text_fsize_xxl;}
+    .main_index p{font-size: $text_fsize_md;}
 
-    .btn-tienda{font-size: $title_fsize_xl;}
+    .btn-tienda{font-size: $title_fsize_md;}
 
-    .t_product{border-radius: 20px;}
+    .t_product{border-radius: 25px;}
 
     .t_product h2{font-size: $text_fsize_xl;}
 
@@ -270,53 +223,104 @@ footer{
 
     .price_product h3{font-size: $text_fsize_xl;}
 
+    .price_product img{width: 10%;}
+
     .btn-compra{font-size: $text_fsize_xl;}
 
-    .main_galeria p{font-size: $text_fsize_xxl;}
+    .fotografo{font-size: $text_fsize_lg;}
 
-    .fotografo{font-size: $text_fsize_xxl;}
+    .main_nosotros h2{font-size: $title_fsize_lg;}
 
-    .main_nosotros h2{font-size: $title_fsize_xxl;}
+    .main_nosotros p{font-size: $text_fsize_md;}
 
-    .main_nosotros p{font-size: $text_fsize_xl;}
+    .redes p{font-size: $text_fsize_xl;}
 
-    .main_contacto p{font-size: $text_fsize_sm;}
+    .redes a {width: 6%;}
 
-    .redes a{width: 7%;}
+    .formulario{
+        border-radius: 25px;
+        label{font-size: $text_fsize_lg;}
+        input{
+            border-radius: 15px;
+            font-size: $text_fsize_lg;
+        }
+        textarea{
+            height: 200px;
+            border-radius: 15px;
+            font-size: $text_fsize_lg;
+        }
+        input::placeholder, textarea::placeholder{font-size: $text_fsize_lg;}
+    } 
+
+    footer h3{font-size: $text_fsize_md;}
+
+    .foot a{font-size: $text_fsize_md;}
+
+    .foot img{width: 20px;}
+
+    .copyright{font-size: $text_fsize_md;}
+}
+
+@media screen and (max-width: 2000px){
+
+    header h1{font-size: 4rem;}
+
+    .nav-link{font-size: $text_fsize_xl;}
+
+    .main_index h2{font-size: $title_fsize_lg;}
+
+    .main_index p{font-size: $text_fsize_md;}
+
+    .btn-tienda{font-size: $title_fsize_sm;}
+
+    .t_product{border-radius: 20px;}
+
+    .t_product h2{font-size: $text_fsize_lg;}
+
+    .t_product p{font-size: $text_fsize_lg;}
+
+    .price_product h3{font-size: $text_fsize_lg;}
+
+    .btn-compra{font-size: $text_fsize_lg;}
+
+    .fotografo{font-size: $text_fsize_md;}
+
+    .main_nosotros h2{font-size: $title_fsize_lg;}
+
+    .main_nosotros p{font-size: $text_fsize_md;}
+
+    .redes p{font-size: $text_fsize_lg;}
+
+    .redes a{width: 6%;}
 
     .formulario{
         border-radius: 15px;
-        label{font-size: $text_fsize_xl;}
+        label{font-size: $text_fsize_md;}
         input{
             border-radius: 5px;
-            font-size: $text_fsize_xl;
+            font-size: $text_fsize_md;
         }
         textarea{
-            height: 300px;
+            height: 200px;
             border-radius: 5px;
-            font-size: $text_fsize_xl;
+            font-size: $text_fsize_md;
         }
-        input::placeholder, textarea::placeholder{font-size: $text_fsize_xl;}
+        input::placeholder, textarea::placeholder{font-size: $text_fsize_md;}
     } 
+    footer h3{font-size: $text_fsize_sm;}
 
-    footer h3{font-size: $title_fsize_xl;}
+    .foot a{font-size: $text_fsize_sm;}
 
-    .foot a{font-size: $text_fsize_xl;}
+    .copyright{font-size: $text_fsize_sm;}
 
-    .foot img{width: 45px;}
+    .foot img{width: 18px;}
 }
 
 @media screen and (max-width: 1400px){
 
-    header h1{font-size: 6rem;}
+    header h1{font-size: 4rem;}
 
-    .nav-link{font-size: $text_fsize_xl;}
-
-    .main_index p{font-size: $text_fsize_xl;}
-
-    .main_index h2{font-size: $title_fsize_xl;}
-    
-    .btn-tienda{font-size: $title_fsize_md;}
+    .nav-link{font-size: $text_fsize_lg;}
 
     .t_product h2{font-size: $text_fsize_md;}
 
@@ -326,38 +330,10 @@ footer{
 
     .btn-compra{font-size: $text_fsize_md;}
 
-    .main_galeria p{font-size: $text_fsize_xl;}
-
-    .fotografo{font-size: $text_fsize_xl;}
-
-    .main_nosotros h2{font-size: $text_fsize_xl;}
-
-    .main_nosotros p{font-size: $text_fsize_md;}
-
-    .formulario label{font-size: $text_fsize_xl;}
-
-    .formulario input{font-size: $text_fsize_xl;}
-
-    .formulario input::placeholder, .formulario textarea::placeholder{font-size: $text_fsize_xl;}
-
-    .formulario textarea{font-size: $text_fsize_xl;}
-
-    footer h3{font-size: $title_fsize_xl;}
-
-    .foot a{font-size: $text_fsize_xl;}
-
-    .foot img{width: 36px;}
+    .main_nosotros h2{font-size: $text_fsize_md;}   
 }
 
 @media screen and (max-width: 1200px){
-
-    header h1{font-size: 5rem;}
-
-    .nav-link{font-size: $text_fsize_md;}
-
-    .main_index h2{font-size: $title_fsize_md;}
-
-    .main_index p{font-size: $text_fsize_md;}
 
     .btn-tienda{font-size: $title_fsize_sm;}
     
@@ -371,24 +347,32 @@ footer{
 
     .btn-compra{font-size: $text_fsize_sm;}
 
-    .main_galeria p{font-size: $text_fsize_md;}
+    .fotografo{font-size: $text_fsize_sm;}
 
-    .fotografo{font-size: $text_fsize_md;}
-    
-    .main_nosotros h2{font-size: $title_fsize_md;}
+    .redes p{font-size: $text_fsize_sm;}
 
-    .main_nosotros p{font-size: $text_fsize_sm;}
+    .redes a{width: 8%;}
 
-    footer h3{font-size: $title_fsize_md;}
+    .formulario label{font-size: $text_fsize_sm;}
 
-    .foot a{font-size: $text_fsize_md;}
+    .formulario input{font-size: $text_fsize_sm;}
 
-    .foot img{width: 26px;}
+    .formulario input::placeholder, .formulario textarea::placeholder{font-size: $text_fsize_sm;}
+
+    .formulario textarea{font-size: $text_fsize_sm;}
+
+    .formulario textarea{height: 100px;}
+
+    footer h3{font-size: $text_fsize_ssm;}
+
+    .foot a{font-size: $text_fsize_ssm;}
+
+    .copyright{font-size: $text_fsize_ssm;}
 }
 
 @media screen and (max-width: 768px){
 
-    header h1{font-size: 4rem;}
+    header h1{font-size: 3rem;}
 
     .nav-link{font-size: $text_fsize_sm;}
 
@@ -399,36 +383,30 @@ footer{
 
     .main_index p{font-size: $text_fsize_sm;}
 
-    .btn-tienda{font-size: $text_fsize_sm;}
+    .btn-tienda{font-size: $text_fsize_ssm;}
 
     .t_product:first-child{margin-top: 0px;}
 
-    .main_galeria p{font-size: $text_fsize_sm;}
-
     .fotografo{
-        font-size: $text_fsize_sm;
+        font-size: $text_fsize_ssm;
         text-decoration: underline;
     }
 
     .main_nosotros h2{font-size: $title_fsize_sm;}
 
-    .main_nosotros p{font-size: $text_fsize_ssm;}
+    .main_nosotros p{font-size: $text_fsize_sm;}
 
-    .formulario label{font-size: $text_fsize_sm;}
+    .redes p{font-size: $text_fsize_sm;}
 
-    .formulario input{font-size: $text_fsize_sm;}
+    .formulario label{font-size: $text_fsize_ssm;}
 
-    .formulario input::placeholder, .formulario textarea::placeholder{font-size: $text_fsize_sm;}
+    .formulario input{font-size: $text_fsize_ssm;}
 
-    .formulario textarea{font-size: $text_fsize_sm;}
+    .formulario input::placeholder, .formulario textarea::placeholder{font-size: $text_fsize_ssm;}
 
-    .redes a{width: 5%;}
+    .formulario textarea{font-size: $text_fsize_ssm;}
 
-    footer h3{font-size: $title_fsize_sm;}
-
-    .foot a{font-size: $text_fsize_sm;}
-
-    .foot img{width: 18px;}
+    .foot img{width: 16px;}
 }
 
 @media screen and (min-width: 575px){
@@ -440,7 +418,7 @@ footer{
 
 @media screen and (max-width: 575px){
 
-    header h1{font-size: 3rem;}
+    header h1{font-size: 2rem;}
 
     .nav-link{
         font-size: $text_fsize_md;
@@ -451,8 +429,6 @@ footer{
 
     .main_index p{font-size: $title_fsize_ssm;}
 
-    .btn-tienda{font-size: $title_fsize_ssm;}
-
     .t_product h2{font-size: $title_fsize_ssm;}
 
     .t_product p{font-size: $text_fsize_ssm;}
@@ -461,24 +437,11 @@ footer{
 
     .btn-compra{font-size: $text_fsize_ssm;}
 
-    .main_contacto p{font-size: $text_fsize_ssm;}
+    .main_nosotros h2{font-size: $title_fsize_ssm;}
+
+    .main_nosotros p{font-size: $title_fsize_ssm;}
 
     .redes a{width: 7%;}
-
-    .formulario label{font-size: $text_fsize_ssm;}
-
-    .formulario input{font-size: $text_fsize_ssm;}
-
-    .formulario input::placeholder, .formulario textarea::placeholder{font-size: $text_fsize_ssm;}
-
-    .formulario textarea{
-        font-size: $text_fsize_ssm;
-        height: 200px;
-    }
-
-    footer h3{font-size: $title_fsize_ssm;}
-
-    .foot a{font-size: $text_fsize_ssm;}
 }
 
 @media screen and (max-width: 374px){
