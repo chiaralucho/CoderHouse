@@ -82,13 +82,6 @@ header{
     object-fit: cover;
 }
 
-.whatsapp{
-    width: 5%;
-    position: fixed;
-    bottom: 40px;
-    left: 10px;
-}
-
 .galeria img{
     box-shadow: -1px -1px 10px 0.5px #000000;
     border-radius: 15px;
@@ -104,11 +97,7 @@ header{
     box-shadow: -2px -2px 15px 0.5px #000000;
     border-radius: 10px;
     overflow: hidden;
-    ul{
-
-        width: 600%; //100% * photo
-
-    }
+    ul{width: 600%;}  //100% * photo
     li{
         width: 100%;
         list-style: none;
